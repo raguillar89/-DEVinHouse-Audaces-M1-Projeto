@@ -10,9 +10,16 @@
   width: 100%;
 }
 
+svg {
+  position: absolute;
+  bottom: 735px;
+  width: 36px;
+  height: 36px;
+}
+
 .form {
   width: 30rem;
-  height: 26rem;
+  height: 27rem;
   margin: auto;
   background-color: rgb(255, 255, 255);
   padding: 2rem 3rem;
