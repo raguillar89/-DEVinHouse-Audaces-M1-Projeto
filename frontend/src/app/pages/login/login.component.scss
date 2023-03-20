@@ -1,0 +1,53 @@
+.container {
+  height: 100%;
+  background: #F2F5FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form {
+  width: 30rem;
+  height: 26rem;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+h4 {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-bottom: 50px;
+  color: lightgrey;
+}
+
+button {
+  height: 3rem;
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #0073CF;
+  font-family: 'Inter';
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.redefinePassword {
+  position: absolute;
+  top: 735px;
+}
+
+.redefinePassword p {
+  color: #989898;
+  font-size: 1rem;
+  font-family: 'Inter';
+}
