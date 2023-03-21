@@ -32,7 +32,7 @@ export class UserService {
     return this.http.post<IUser>(`${API_CONFIG.baseUrl}/users`, user).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
-    );;
+    );
   }
 
   errorHandler(e: any): Observable<any> {

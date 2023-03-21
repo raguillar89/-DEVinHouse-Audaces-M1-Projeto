@@ -78,7 +78,6 @@ export class LoginComponent implements OnInit {
       this.service.showMessage('Login Realizado com Sucesso.')
       this.router.navigate(['/wm']);
     } else {
-      //alert('E-mail and/or Password incorrect');
       this.service.showMessage('E-mail e/ou Password Incorretos.')
       this.createLocalStorage(false);
     }
