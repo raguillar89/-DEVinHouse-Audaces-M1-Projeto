@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from 'src/app/interface/user.interface';
-import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-redefine-password',
@@ -11,7 +9,7 @@ import { UserService } from 'src/app/services/user/user.service';
 })
 export class RedefinePasswordComponent implements OnInit {
 
-  formUser!: FormGroup;
+  formUserRedefine!: FormGroup;
 
   ngOnInit(): void {
     this.createForm();
@@ -20,12 +18,18 @@ export class RedefinePasswordComponent implements OnInit {
   constructor(private router: Router) { }
 
   createForm() {
-    this.formUser = new FormGroup({
+    this.formUserRedefine = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.minLength(10), Validators.email]),
     });
   }
 
+  extractEmail() {
+    let email = this.formUserRedefine.get('email')?.value;
+    localStorage.setItem('email', email);
+  }
+
   sendEmail(): void {
+    this.extractEmail();
     this.router.navigate(['/sedingConfirmation']);
   }
 }
