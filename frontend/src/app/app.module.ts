@@ -27,6 +27,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { UserRegistrationComponent } from './pages/user-registration/user-registration.component';
 import { RedefinePasswordComponent } from './pages/redefine-password/redefine-password.component';
 import { SedingConfirmationComponent } from './pages/seding-confirmation/seding-confirmation.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SedingConfirmationComponent } from './pages/seding-confirmation/seding-
     LoginComponent,
     UserRegistrationComponent,
     RedefinePasswordComponent,
-    SedingConfirmationComponent
+    SedingConfirmationComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
