@@ -26,6 +26,6 @@ export class RedefinePasswordComponent implements OnInit {
   }
 
   sendEmail(): void {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/sedingConfirmation']);
   }
 }
