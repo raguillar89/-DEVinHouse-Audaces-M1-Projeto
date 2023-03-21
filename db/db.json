@@ -1,0 +1,12 @@
+{
+    "users": [
+        {
+          "id": 1,
+          "userName": "Renan Pinho",
+          "userCompany": "Audaces",
+          "userCnpj": "85.236.743/0001-18",
+          "userEmail": "renan@email.com",
+          "userPassword": "123456as"
+        }
+      ]
+}
