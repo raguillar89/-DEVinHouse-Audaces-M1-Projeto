@@ -28,6 +28,13 @@ export class UserService {
     );
   }
 
+  create(user: IUser): Observable<IUser> {
+    return this.http.post<IUser>(`${API_CONFIG.baseUrl}/users`, user).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );;
+  }
+
   errorHandler(e: any): Observable<any> {
     this.showMessage('Ocorreu um erro!', true);
     return EMPTY;
