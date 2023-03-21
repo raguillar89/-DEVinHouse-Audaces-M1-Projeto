@@ -25,12 +25,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UserRegistrationComponent } from './pages/user-registration/user-registration.component';
+import { RedefinePasswordComponent } from './pages/redefine-password/redefine-password.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    RedefinePasswordComponent
   ],
   imports: [
     BrowserModule,
