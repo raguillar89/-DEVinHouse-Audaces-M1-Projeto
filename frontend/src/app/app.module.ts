@@ -26,13 +26,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UserRegistrationComponent } from './pages/user-registration/user-registration.component';
 import { RedefinePasswordComponent } from './pages/redefine-password/redefine-password.component';
+import { SedingConfirmationComponent } from './pages/seding-confirmation/seding-confirmation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UserRegistrationComponent,
-    RedefinePasswordComponent
+    RedefinePasswordComponent,
+    SedingConfirmationComponent
   ],
   imports: [
     BrowserModule,
