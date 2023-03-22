@@ -28,6 +28,7 @@ import { UserRegistrationComponent } from './pages/user-registration/user-regist
 import { RedefinePasswordComponent } from './pages/redefine-password/redefine-password.component';
 import { SedingConfirmationComponent } from './pages/seding-confirmation/seding-confirmation.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { LayoutFullScreenComponent } from './layout/layout-full-screen/layout-full-screen.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     UserRegistrationComponent,
     RedefinePasswordComponent,
     SedingConfirmationComponent,
-    SidebarComponent
+    SidebarComponent,
+    LayoutFullScreenComponent
   ],
   imports: [
     BrowserModule,
