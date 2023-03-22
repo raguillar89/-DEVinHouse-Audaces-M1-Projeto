@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthguardGuard } from './guard/authguard.guard';
 import { LayoutFullScreenComponent } from './layout/layout-full-screen/layout-full-screen.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RedefinePasswordComponent } from './pages/redefine-password/redefine-password.component';
@@ -11,7 +12,9 @@ const routes: Routes = [
   { path: 'userRegistration', component: UserRegistrationComponent },
   { path: 'redefinePassword', component: RedefinePasswordComponent },
   { path: 'sedingConfirmation', component: SedingConfirmationComponent },
-  { path: '', component: LayoutFullScreenComponent }
+  { path: 'wm', component: LayoutFullScreenComponent, canActivateChild:[AuthguardGuard], children:[
+    { path: '', redirectTo: 'wm', pathMatch: 'full' }
+  ]}
 ];
 
 @NgModule({
