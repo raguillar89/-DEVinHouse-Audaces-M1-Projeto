@@ -30,6 +30,7 @@ import { SedingConfirmationComponent } from './pages/seding-confirmation/seding-
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LayoutFullScreenComponent } from './layout/layout-full-screen/layout-full-screen.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     SedingConfirmationComponent,
     SidebarComponent,
     LayoutFullScreenComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
