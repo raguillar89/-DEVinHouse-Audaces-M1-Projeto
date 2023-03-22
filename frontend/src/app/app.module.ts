@@ -29,6 +29,7 @@ import { RedefinePasswordComponent } from './pages/redefine-password/redefine-pa
 import { SedingConfirmationComponent } from './pages/seding-confirmation/seding-confirmation.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LayoutFullScreenComponent } from './layout/layout-full-screen/layout-full-screen.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { LayoutFullScreenComponent } from './layout/layout-full-screen/layout-fu
     RedefinePasswordComponent,
     SedingConfirmationComponent,
     SidebarComponent,
-    LayoutFullScreenComponent
+    LayoutFullScreenComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
