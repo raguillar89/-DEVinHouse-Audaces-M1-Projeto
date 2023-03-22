@@ -32,6 +32,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LayoutFullScreenComponent } from './layout/layout-full-screen/layout-full-screen.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SubMenuComponent } from './components/sub-menu/sub-menu.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { HeaderComponent } from './components/header/header.component';
     SidebarComponent,
     LayoutFullScreenComponent,
     DashboardComponent,
-    HeaderComponent
+    HeaderComponent,
+    SubMenuComponent
   ],
   imports: [
     BrowserModule,
