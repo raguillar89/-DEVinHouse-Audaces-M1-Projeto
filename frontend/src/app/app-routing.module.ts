@@ -11,9 +11,12 @@ import { UserRegistrationComponent } from './pages/user-registration/user-regist
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+
   { path: 'userRegistration', component: UserRegistrationComponent },
+
   { path: 'redefinePassword', component: RedefinePasswordComponent },
   { path: 'sedingConfirmation', component: SedingConfirmationComponent },
+
   { path: 'wm', component: LayoutFullScreenComponent, canActivateChild:[AuthguardGuard], children:[
     { path: 'wm', redirectTo: 'dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: DashboardComponent }
