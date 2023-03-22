@@ -1,0 +1,22 @@
+.container {
+  height: 100%;
+  background: #F2F5FF;
+}
+
+.top-content {
+  display: flex;
+}
+
+app-header {
+  margin-left: -50px;
+}
+
+.menu {
+  margin: 1.5rem 0 0 1rem;
+  color: #dfe7ff;
+  background: #b1c4ff;
+}
+
+mat-icon {
+  background: #b1c4ff;
+}
