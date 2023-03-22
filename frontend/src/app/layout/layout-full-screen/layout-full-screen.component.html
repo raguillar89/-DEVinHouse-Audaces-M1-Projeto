@@ -1,1 +1,14 @@
-<p>layout-full-screen works!</p>
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+  <div class="sidenav">
+    <div class="top-content">
+      <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <app-header></app-header>
+    </div>
+    <router-outlet></router-outlet>
+</div>
+</mat-drawer-container>
