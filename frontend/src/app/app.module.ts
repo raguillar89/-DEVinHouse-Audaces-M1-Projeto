@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxMaskPipe, NgxMaskDirective, provideNgxMask } from 'ngx-mask';
@@ -66,6 +67,8 @@ import { HeaderComponent } from './components/header/header.component';
     MatListModule,
     MatCardModule,
     MatSnackBarModule,
+    MatMenuModule,
+    MatButtonModule,
     RouterModule,
     ToastrModule.forRoot(),
     NgxMaskPipe,
