@@ -14,10 +14,10 @@ export class CollectionListComponent implements OnInit{
   collection: Collection = new Collection();
   listCollections: Collection[] = [];
 
-  //displayedColumns: string[] = ['Coleção', 'Responsável', 'Estação - Lançamento', 'Moelos', 'Orçamento'];
-  //dataSource = new MatTableDataSource<Collection>(this.listCollections);
+  displayedColumns: string[] = ['Coleção', 'Responsável', 'Estação - Lançamento', 'Modelos', 'Orçamento'];
+  dataSource = new MatTableDataSource<Collection>(this.listCollections);
 
-  //@ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(private service: CollectionService) {}
 
@@ -28,8 +28,12 @@ export class CollectionListComponent implements OnInit{
   findAll() {
     this.service.findAll().subscribe((collections) => {
       this.listCollections = collections;
-      //this.dataSource = new MatTableDataSource<Collection>(collections);
-      //this.dataSource.paginator = this.paginator;
+      this.dataSource = new MatTableDataSource<Collection>(collections);
+      this.dataSource.paginator = this.paginator;
     })
+  }
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
   }
 }

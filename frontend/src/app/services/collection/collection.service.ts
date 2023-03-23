@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable, EMPTY } from 'rxjs';
 import { API_CONFIG } from 'src/app/environments/environments';
-import { Collection } from 'src/app/interface/collection.interface';
+import { ICollection } from 'src/app/interface/collection.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +26,7 @@ export class CollectionService {
     return EMPTY;
   }
 
-  findAll(): Observable<Collection[]> {
-    return this.http.get<Collection[]>(`${API_CONFIG.baseUrl}/collections`);
+  findAll(): Observable<ICollection[]> {
+    return this.http.get<ICollection[]>(`${API_CONFIG.baseUrl}/collections`);
   }
 }
