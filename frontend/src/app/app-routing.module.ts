@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthguardGuard } from './guard/authguard.guard';
 import { LayoutFullScreenComponent } from './layout/layout-full-screen/layout-full-screen.component';
+import { CollectionEditComponent } from './pages/collection/collection-edit/collection-edit.component';
 import { CollectionListComponent } from './pages/collection/collection-list/collection-list.component';
 import { CollectionRegisterComponent } from './pages/collection/collection-register/collection-register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -24,7 +25,8 @@ const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
 
     { path: 'collection', component: CollectionListComponent },
-    { path: 'collection/register', component: CollectionRegisterComponent }
+    { path: 'collection/register', component: CollectionRegisterComponent },
+    { path: 'collection/edit/:id', component: CollectionEditComponent }
   ]}
 ];
 
