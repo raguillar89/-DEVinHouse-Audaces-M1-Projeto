@@ -26,7 +26,7 @@ export class CollectionRegisterComponent {
       collectionResponsible: new FormControl('', [Validators.required, Validators.minLength(5)]),
       collectionSeason: new FormControl('', [Validators.required, Validators.minLength(5)]),
       collectionYear: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(4)]),
-      collectionModelQuatity: new FormControl('', [Validators.required, Validators.minLength(1)]),
+      collectionBrand: new FormControl('', [Validators.required, Validators.minLength(4)]),
       collectionBudget: new FormControl('', [Validators.required, Validators.minLength(1)])
     });
   }

@@ -19,67 +19,22 @@
   ],
   "collections": [
     {
-      "idCollection": 1,
-      "collectionName": "Adidas",
-      "collectionResponsible": "Renan Pinho",
-      "collectionSeason": "Verão",
-      "collectionYear": "2023",
-      "collectionModelQuatity": 100,
-      "collectionBudget": 12000
+      "collectionName": "Camisas de Futebol",
+      "collectionResponsible": "Matheus Freitas",
+      "collectionSeason": "Outono",
+      "collectionYear": 2024,
+      "collectionBrand": "Adidas",
+      "collectionBudget": 25000,
+      "id": 1
     },
     {
-      "idCollection": 2,
-      "collectionName": "Adidas",
-      "collectionResponsible": "Renan Pinho",
+      "collectionName": "Camisas de Futebol",
+      "collectionResponsible": "Matheus Freitas",
       "collectionSeason": "Verão",
-      "collectionYear": "2023",
-      "collectionModelQuatity": 100,
-      "collectionBudget": 12000
-    },
-    {
-      "idCollection": 3,
-      "collectionName": "Adidas",
-      "collectionResponsible": "Renan Pinho",
-      "collectionSeason": "Verão",
-      "collectionYear": "2023",
-      "collectionModelQuatity": 100,
-      "collectionBudget": 12000
-    },
-    {
-      "idCollection": 4,
-      "collectionName": "Adidas",
-      "collectionResponsible": "Renan Pinho",
-      "collectionSeason": "Verão",
-      "collectionYear": "2023",
-      "collectionModelQuatity": 100,
-      "collectionBudget": 12000
-    },
-    {
-      "idCollection": 5,
-      "collectionName": "Adidas",
-      "collectionResponsible": "Renan Pinho",
-      "collectionSeason": "Verão",
-      "collectionYear": "2023",
-      "collectionModelQuatity": 100,
-      "collectionBudget": 12000
-    },
-    {
-      "idCollection": 6,
-      "collectionName": "Adidas",
-      "collectionResponsible": "Renan Pinho",
-      "collectionSeason": "Verão",
-      "collectionYear": "2023",
-      "collectionModelQuatity": 100,
-      "collectionBudget": 12000
-    },
-    {
-      "idCollection": 7,
-      "collectionName": "Adidas",
-      "collectionResponsible": "Renan Pinho",
-      "collectionSeason": "Verão",
-      "collectionYear": "2023",
-      "collectionModelQuatity": 100,
-      "collectionBudget": 12000
+      "collectionYear": 2023,
+      "collectionBrand": "Nike",
+      "collectionBudget": 31000,
+      "id": 2
     }
   ]
 }
