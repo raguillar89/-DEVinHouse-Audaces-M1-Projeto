@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthguardGuard } from './guard/authguard.guard';
 import { LayoutFullScreenComponent } from './layout/layout-full-screen/layout-full-screen.component';
+import { CollectionListComponent } from './pages/collection/collection-list/collection-list.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RedefinePasswordComponent } from './pages/redefine-password/redefine-password.component';
@@ -19,7 +20,9 @@ const routes: Routes = [
 
   { path: 'wm', component: LayoutFullScreenComponent, canActivateChild:[AuthguardGuard], children:[
     { path: 'wm', redirectTo: 'dashboard', pathMatch: 'full' },
-    { path: 'dashboard', component: DashboardComponent }
+    { path: 'dashboard', component: DashboardComponent },
+
+    { path: 'collection', component: CollectionListComponent }
   ]}
 ];
 
