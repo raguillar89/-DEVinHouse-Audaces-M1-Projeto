@@ -34,6 +34,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SubMenuComponent } from './components/sub-menu/sub-menu.component';
 import { CollectionListComponent } from './pages/collection/collection-list/collection-list.component';
+import { CollectionRegisterComponent } from './pages/collection/collection-register/collection-register.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { CollectionListComponent } from './pages/collection/collection-list/coll
     DashboardComponent,
     HeaderComponent,
     SubMenuComponent,
-    CollectionListComponent
+    CollectionListComponent,
+    CollectionRegisterComponent
   ],
   imports: [
     BrowserModule,
