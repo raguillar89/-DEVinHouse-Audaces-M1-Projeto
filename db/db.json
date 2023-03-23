@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "userId": 1,
       "userName": "Renan Pinho",
       "userCompany": "Audaces",
       "userCnpj": "85.236.743/0001-18",
@@ -14,10 +14,18 @@
       "userCnpj": "11111111111111",
       "userEmail": "joao.paulo@email.com",
       "userPassword": "12345678",
-      "id": 2
+      "userId": 2
     }
   ],
   "collections": [
-    
+    {
+      "idCollection": 1,
+      "collectionName": "Adidas",
+      "collectionResponsible": "Renan Pinho",
+      "collectionSeason": "Verão",
+      "collectionYear": "2023",
+      "collectionModelQuatity": 100,
+      "collectionBudget": 12000
+    }
   ]
 }
