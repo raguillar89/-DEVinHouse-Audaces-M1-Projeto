@@ -1,5 +1,5 @@
 export interface IUser{
-  userId?: number,
+  id?: number,
   userName: string,
   userCompany: string,
   userCnpj: string,
@@ -8,7 +8,7 @@ export interface IUser{
 }
 
 export class User implements IUser {
-  userId?: number | undefined;
+  id?: number | undefined;
   userName!: string;
   userCompany!: string;
   userCnpj!: string;
