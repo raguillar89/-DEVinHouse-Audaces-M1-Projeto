@@ -30,7 +30,19 @@ export class CollectionService {
     return this.http.get<Collection[]>(`${API_CONFIG.baseUrl}/collections`);
   }
 
+  findById(id: any): Observable<Collection> {
+    return this.http.get<Collection>(`${API_CONFIG.baseUrl}/collections/${id}`)
+  }
+
   create(collection: Collection): Observable<Collection> {
     return this.http.post<Collection>(`${API_CONFIG.baseUrl}/collections`, collection);
+  }
+
+  update(collection: Collection): Observable<Collection> {
+    return this.http.put<Collection>(`${API_CONFIG.baseUrl}/collections/${collection.id}`, collection);
+  }
+
+  delete(id: any): Observable<Collection> {
+    return this.http.delete<Collection>(`${API_CONFIG.baseUrl}/collections/${id}`);
   }
 }
