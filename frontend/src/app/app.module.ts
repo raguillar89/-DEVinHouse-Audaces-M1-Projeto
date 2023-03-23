@@ -35,6 +35,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SubMenuComponent } from './components/sub-menu/sub-menu.component';
 import { CollectionListComponent } from './pages/collection/collection-list/collection-list.component';
 import { CollectionRegisterComponent } from './pages/collection/collection-register/collection-register.component';
+import { CollectionEditComponent } from './pages/collection/collection-edit/collection-edit.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { CollectionRegisterComponent } from './pages/collection/collection-regis
     HeaderComponent,
     SubMenuComponent,
     CollectionListComponent,
-    CollectionRegisterComponent
+    CollectionRegisterComponent,
+    CollectionEditComponent
   ],
   imports: [
     BrowserModule,
