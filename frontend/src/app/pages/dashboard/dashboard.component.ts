@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
+  displayedColumns: string[] = ['Coleção', 'Responsável', 'Modelos', 'Orçamento'];
+
 }
