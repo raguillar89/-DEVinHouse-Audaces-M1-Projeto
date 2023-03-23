@@ -1,0 +1,31 @@
+.container {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+table {
+  width: 90%;
+}
+
+.headerPage {
+  display: flex;
+  margin: 2rem 0;;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 3px;
+  margin-right: 70%;
+}
+
+button {
+  width: 25%;
+  margin-bottom: 1rem;
+  background-color: #0073CF;
+}
+
+th, td {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}

@@ -26,6 +26,60 @@
       "collectionYear": "2023",
       "collectionModelQuatity": 100,
       "collectionBudget": 12000
+    },
+    {
+      "idCollection": 2,
+      "collectionName": "Adidas",
+      "collectionResponsible": "Renan Pinho",
+      "collectionSeason": "Verão",
+      "collectionYear": "2023",
+      "collectionModelQuatity": 100,
+      "collectionBudget": 12000
+    },
+    {
+      "idCollection": 3,
+      "collectionName": "Adidas",
+      "collectionResponsible": "Renan Pinho",
+      "collectionSeason": "Verão",
+      "collectionYear": "2023",
+      "collectionModelQuatity": 100,
+      "collectionBudget": 12000
+    },
+    {
+      "idCollection": 4,
+      "collectionName": "Adidas",
+      "collectionResponsible": "Renan Pinho",
+      "collectionSeason": "Verão",
+      "collectionYear": "2023",
+      "collectionModelQuatity": 100,
+      "collectionBudget": 12000
+    },
+    {
+      "idCollection": 5,
+      "collectionName": "Adidas",
+      "collectionResponsible": "Renan Pinho",
+      "collectionSeason": "Verão",
+      "collectionYear": "2023",
+      "collectionModelQuatity": 100,
+      "collectionBudget": 12000
+    },
+    {
+      "idCollection": 6,
+      "collectionName": "Adidas",
+      "collectionResponsible": "Renan Pinho",
+      "collectionSeason": "Verão",
+      "collectionYear": "2023",
+      "collectionModelQuatity": 100,
+      "collectionBudget": 12000
+    },
+    {
+      "idCollection": 7,
+      "collectionName": "Adidas",
+      "collectionResponsible": "Renan Pinho",
+      "collectionSeason": "Verão",
+      "collectionYear": "2023",
+      "collectionModelQuatity": 100,
+      "collectionBudget": 12000
     }
   ]
 }
