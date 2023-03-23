@@ -29,4 +29,8 @@ export class CollectionService {
   findAll(): Observable<ICollection[]> {
     return this.http.get<ICollection[]>(`${API_CONFIG.baseUrl}/collections`);
   }
+
+  create(collection: ICollection): Observable<ICollection> {
+    return this.http.post<ICollection>(`${API_CONFIG.baseUrl}/collections`, collection);
+  }
 }
