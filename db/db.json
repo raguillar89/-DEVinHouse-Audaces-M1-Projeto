@@ -47,6 +47,13 @@
     }
   ],
   "models": [
-    
+    {
+      "id": 1,
+      "modelName": "Camisetas Sport",
+      "modelResponsible": "Yan Esteves",
+      "modelCollection": "Adidas",
+      "modelEmbroidery": "Sim",
+      "modelPrint": "Não"
+    }
   ]
 }
