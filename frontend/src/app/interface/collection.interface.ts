@@ -1,5 +1,5 @@
 export interface ICollection{
-  id?: number,
+  id?: any,
   collectionName: string,
   collectionResponsible: string,
   collectionSeason: string,
@@ -10,7 +10,7 @@ export interface ICollection{
 }
 
 export class Collection implements ICollection {
-  id?: number | undefined;
+  id?: any;
   collectionName!: string;
   collectionResponsible!: string;
   collectionSeason!: string;

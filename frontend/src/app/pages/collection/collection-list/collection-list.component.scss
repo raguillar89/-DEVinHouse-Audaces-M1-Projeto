@@ -7,7 +7,7 @@
 
 .headerPage {
   display: flex;
-  margin: 3% 15.5%;
+  margin: 1.35% 15.7% 2.1% 15.7%;
 }
 
 h1 {
@@ -26,4 +26,9 @@ th, td {
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+td:hover {
+  background: #3086cc;
+  color: white;
 }

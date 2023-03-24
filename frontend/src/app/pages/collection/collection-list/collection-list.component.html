@@ -6,34 +6,33 @@
 <div class="container mat-elevation-z8">
 
   <table mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="Coleção">
+        <th mat-header-cell *matHeaderCellDef> Coleção </th>
+        <td mat-cell *matCellDef="let collection" (click)="redirect(collection.id)"> {{collection.collectionName}} </td>
+      </ng-container>
 
-    <ng-container matColumnDef="Coleção">
-      <th mat-header-cell *matHeaderCellDef> Coleção </th>
-      <td mat-cell *matCellDef="let collection"> {{collection.collectionName}} </td>
-    </ng-container>
+      <ng-container matColumnDef="Responsável">
+        <th mat-header-cell *matHeaderCellDef> Responsável </th>
+        <td mat-cell *matCellDef="let collection" (click)="redirect(collection.id)"> {{collection.collectionResponsible}} </td>
+      </ng-container>
 
-    <ng-container matColumnDef="Responsável">
-      <th mat-header-cell *matHeaderCellDef> Responsável </th>
-      <td mat-cell *matCellDef="let collection"> {{collection.collectionResponsible}} </td>
-    </ng-container>
+      <ng-container matColumnDef="Estação - Lançamento">
+        <th mat-header-cell *matHeaderCellDef> Estação - Lançamento </th>
+        <td mat-cell *matCellDef="let collection"  (click)="redirect(collection.id)"> {{collection.collectionSeason}} - {{collection.collectionYear}} </td>
+      </ng-container>
 
-    <ng-container matColumnDef="Estação - Lançamento">
-      <th mat-header-cell *matHeaderCellDef> Estação - Lançamento </th>
-      <td mat-cell *matCellDef="let collection"> {{collection.collectionSeason}} - {{collection.collectionYear}} </td>
-    </ng-container>
+      <ng-container matColumnDef="Modelos">
+        <th mat-header-cell *matHeaderCellDef> Modelos </th>
+        <td mat-cell *matCellDef="let collection" (click)="redirect(collection.id)"> {{collection.collectionModelQuantity}} </td>
+      </ng-container>
 
-    <ng-container matColumnDef="Modelos">
-      <th mat-header-cell *matHeaderCellDef> Modelos </th>
-      <td mat-cell *matCellDef="let collection"> {{collection.collectionModelQuantity}} </td>
-    </ng-container>
+      <ng-container matColumnDef="Orçamento">
+        <th mat-header-cell *matHeaderCellDef> Orçamento </th>
+        <td mat-cell *matCellDef="let collection" (click)="redirect(collection.id)"> {{collection.collectionBudget | currency: 'BRL'}} </td>
+      </ng-container>
 
-    <ng-container matColumnDef="Orçamento">
-      <th mat-header-cell *matHeaderCellDef> Orçamento </th>
-      <td mat-cell *matCellDef="let collection"> {{collection.collectionBudget | currency: 'BRL'}} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
   <mat-paginator [pageSizeOptions]="[5, 10, 15]"

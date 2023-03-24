@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { Collection } from 'src/app/interface/collection.interface';
 import { CollectionService } from 'src/app/services/collection/collection.service';
 
@@ -19,7 +20,7 @@ export class CollectionListComponent implements OnInit{
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private service: CollectionService) {}
+  constructor(private service: CollectionService, private router: Router) {}
 
   ngOnInit(): void {
     this.findAll();
@@ -35,5 +36,9 @@ export class CollectionListComponent implements OnInit{
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+  }
+
+  redirect(id: any) {
+    this.router.navigate([`wm/collection/edit/${id}`]);
   }
 }
