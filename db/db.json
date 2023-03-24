@@ -44,15 +44,6 @@
       "collectionBrand": "Puma",
       "collectionBudget": 12000,
       "id": 3
-    },
-    {
-      "collectionName": "Camisas de Futebol",
-      "collectionResponsible": "Matheus Freitas",
-      "collectionSeason": "Verão",
-      "collectionYear": 20225,
-      "collectionBrand": "Reebok",
-      "collectionBudget": 21456,
-      "id": 4
     }
   ]
 }
