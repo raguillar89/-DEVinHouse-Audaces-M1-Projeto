@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Collection } from 'src/app/interface/collection.interface';
 import { Model } from 'src/app/interface/model.interface';
+import { CollectionService } from 'src/app/services/collection/collection.service';
 import { ModelService } from 'src/app/services/model/model.service';
 
 @Component({
@@ -13,13 +15,16 @@ export class ModelEditComponent implements OnInit {
 
   model: Model = new Model();
   formModel!: FormGroup;
+  collection: Collection = new Collection();
+  listCollections: Collection[] = [];
 
-  constructor(private service: ModelService, private router: Router, private route: ActivatedRoute) {}
+  constructor(private service: ModelService, private router: Router, private route: ActivatedRoute, private collectionService: CollectionService) {}
 
   ngOnInit(): void {
     this.model.id = this.route.snapshot.paramMap.get('id');
     this.findById();
     this.createForm();
+    this.findAllCollection();
   }
 
   createForm() {
@@ -50,6 +55,12 @@ export class ModelEditComponent implements OnInit {
     this.service.delete(this.model.id).subscribe(() => {
       this.service.showMessage('Coleção Excluída com Sucesso!', true);
       this.router.navigate(['wm/model']);
+    })
+  }
+
+  findAllCollection() {
+    this.collectionService.findAll().subscribe((collections) => {
+      this.listCollections = collections;
     })
   }
 }
