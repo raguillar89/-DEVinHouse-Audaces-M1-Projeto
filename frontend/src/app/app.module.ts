@@ -38,6 +38,7 @@ import { CollectionRegisterComponent } from './pages/collection/collection-regis
 import { CollectionEditComponent } from './pages/collection/collection-edit/collection-edit.component';
 import { ModelListComponent } from './pages/model/model-list/model-list.component';
 import { ModelRegisterComponent } from './pages/model/model-register/model-register.component';
+import { ModelEditComponent } from './pages/model/model-edit/model-edit.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ModelRegisterComponent } from './pages/model/model-register/model-regis
     CollectionRegisterComponent,
     CollectionEditComponent,
     ModelListComponent,
-    ModelRegisterComponent
+    ModelRegisterComponent,
+    ModelEditComponent
   ],
   imports: [
     BrowserModule,
