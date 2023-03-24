@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Collection } from 'src/app/interface/collection.interface';
@@ -9,7 +9,7 @@ import { CollectionService } from 'src/app/services/collection/collection.servic
   templateUrl: './collection-register.component.html',
   styleUrls: ['./collection-register.component.scss']
 })
-export class CollectionRegisterComponent {
+export class CollectionRegisterComponent implements OnInit {
 
   collection: Collection = new Collection();
   formCollection!: FormGroup;
