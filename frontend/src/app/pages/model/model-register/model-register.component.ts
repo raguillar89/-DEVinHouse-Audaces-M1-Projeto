@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Collection } from 'src/app/interface/collection.interface';
 import { Model } from 'src/app/interface/model.interface';
+import { CollectionService } from 'src/app/services/collection/collection.service';
 import { ModelService } from 'src/app/services/model/model.service';
 
 @Component({
@@ -13,11 +15,14 @@ export class ModelRegisterComponent implements OnInit {
 
   model: Model = new Model();
   formModel!: FormGroup;
+  collection: Collection = new Collection();
+  listCollections: Collection[] = [];
 
-  constructor(private service: ModelService, private router: Router) {}
+  constructor(private service: ModelService, private router: Router, private collectionService: CollectionService) {}
 
   ngOnInit(): void {
     this.createForm();
+    this.findAllCollection();
   }
 
   createForm() {
@@ -27,7 +32,7 @@ export class ModelRegisterComponent implements OnInit {
       modelType: new FormControl('', [Validators.required]),
       modelCollection: new FormControl('', [Validators.required]),
       modelEmbroidery: new FormControl('', [Validators.required]),
-      modelPrint: new FormControl('', [Validators.required])
+      modelStamp: new FormControl('', [Validators.required])
     });
   }
 
@@ -38,4 +43,9 @@ export class ModelRegisterComponent implements OnInit {
     });
   }
 
+  findAllCollection() {
+    this.collectionService.findAll().subscribe((collections) => {
+      this.listCollections = collections;
+    })
+  }
 }
