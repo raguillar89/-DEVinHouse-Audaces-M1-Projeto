@@ -7,6 +7,7 @@ import { CollectionListComponent } from './pages/collection/collection-list/coll
 import { CollectionRegisterComponent } from './pages/collection/collection-register/collection-register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ModelListComponent } from './pages/model/model-list/model-list.component';
 import { RedefinePasswordComponent } from './pages/redefine-password/redefine-password.component';
 import { SedingConfirmationComponent } from './pages/seding-confirmation/seding-confirmation.component';
 import { UserRegistrationComponent } from './pages/user-registration/user-registration.component';
@@ -26,7 +27,9 @@ const routes: Routes = [
 
     { path: 'collection', component: CollectionListComponent },
     { path: 'collection/register', component: CollectionRegisterComponent },
-    { path: 'collection/edit/:id', component: CollectionEditComponent }
+    { path: 'collection/edit/:id', component: CollectionEditComponent },
+
+    { path: 'model', component: ModelListComponent }
   ]}
 ];
 
