@@ -53,20 +53,11 @@
     {
       "modelName": "Camisetas Regatas",
       "modelResponsible": "Renan Pinho",
-      "modelType": "Bolsa",
+      "modelType": "Calça",
       "modelCollection": "Puma",
       "modelEmbroidery": "Não",
       "modelStamp": "Sim",
       "id": 1
-    },
-    {
-      "modelName": "Flamengo",
-      "modelResponsible": "Renan Pinho",
-      "modelType": "Boné",
-      "modelCollection": "Nike",
-      "modelEmbroidery": "Sim",
-      "modelStamp": "Sim",
-      "id": 2
     }
   ]
 }
