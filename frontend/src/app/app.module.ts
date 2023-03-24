@@ -36,6 +36,7 @@ import { SubMenuComponent } from './components/sub-menu/sub-menu.component';
 import { CollectionListComponent } from './pages/collection/collection-list/collection-list.component';
 import { CollectionRegisterComponent } from './pages/collection/collection-register/collection-register.component';
 import { CollectionEditComponent } from './pages/collection/collection-edit/collection-edit.component';
+import { ModelListComponent } from './pages/model/model-list/model-list.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { CollectionEditComponent } from './pages/collection/collection-edit/coll
     SubMenuComponent,
     CollectionListComponent,
     CollectionRegisterComponent,
-    CollectionEditComponent
+    CollectionEditComponent,
+    ModelListComponent
   ],
   imports: [
     BrowserModule,
