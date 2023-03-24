@@ -29,4 +29,9 @@ export class ModelService {
   findAll(): Observable<Model[]> {
     return this.http.get<Model[]>(`${API_CONFIG.baseUrl}/models`);
   }
+
+  create(model: Model): Observable<Model> {
+    return this.http.post<Model>(`${API_CONFIG.baseUrl}/models`, model);
+  }
+
 }
