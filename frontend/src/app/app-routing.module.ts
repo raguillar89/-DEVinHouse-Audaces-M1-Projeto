@@ -26,8 +26,8 @@ const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
 
     { path: 'collection', component: CollectionListComponent },
-    { path: 'collection/register', component: CollectionRegisterComponent },
-    { path: 'collection/edit/:id', component: CollectionEditComponent },
+    { path: 'collection/clRegister', component: CollectionRegisterComponent },
+    { path: 'collection/clEdit/:id', component: CollectionEditComponent },
 
     { path: 'model', component: ModelListComponent }
   ]}

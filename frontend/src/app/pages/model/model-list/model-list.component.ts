@@ -39,7 +39,7 @@ export class ModelListComponent  implements OnInit{
   }
 
   redirect(id: any) {
-    this.router.navigate([`wm/model/edit/${id}`]);
+    this.router.navigate([`wm/model/mlEdit/${id}`]);
   }
 
 }
