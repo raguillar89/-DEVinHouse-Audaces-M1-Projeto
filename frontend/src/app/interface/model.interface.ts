@@ -5,7 +5,7 @@ export interface IModel{
   modelResponsible: string,
   modelCollection: string,
   modelEmbroidery: string,
-  modelPrint: string
+  modelStamp: string
 }
 
 export class Model implements IModel {
@@ -15,5 +15,5 @@ export class Model implements IModel {
   modelResponsible!: string;
   modelCollection!: string;
   modelEmbroidery!: string;
-  modelPrint!: string;
+  modelStamp!: string;
 }
