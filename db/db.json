@@ -50,6 +50,7 @@
     {
       "id": 1,
       "modelName": "Camisetas Sport",
+      "modelType": "Camisa",
       "modelResponsible": "Yan Esteves",
       "modelCollection": "Adidas",
       "modelEmbroidery": "Sim",
