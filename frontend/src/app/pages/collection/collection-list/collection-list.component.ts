@@ -39,6 +39,6 @@ export class CollectionListComponent implements OnInit{
   }
 
   redirect(id: any) {
-    this.router.navigate([`wm/collection/edit/${id}`]);
+    this.router.navigate([`wm/collection/clEdit/${id}`]);
   }
 }
