@@ -30,8 +30,19 @@ export class ModelService {
     return this.http.get<Model[]>(`${API_CONFIG.baseUrl}/models`);
   }
 
+  findById(id: any): Observable<Model> {
+    return this.http.get<Model>(`${API_CONFIG.baseUrl}/models/${id}`)
+  }
+
   create(model: Model): Observable<Model> {
     return this.http.post<Model>(`${API_CONFIG.baseUrl}/models`, model);
   }
 
+  update(model: Model): Observable<Model> {
+    return this.http.put<Model>(`${API_CONFIG.baseUrl}/models/${model.id}`, model);
+  }
+
+  delete(id: any): Observable<Model> {
+    return this.http.delete<Model>(`${API_CONFIG.baseUrl}/models/${id}`);
+  }
 }
