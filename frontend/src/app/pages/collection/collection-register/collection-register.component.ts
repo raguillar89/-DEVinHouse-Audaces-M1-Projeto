@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Collection } from 'src/app/interface/collection.interface';
 import { CollectionService } from 'src/app/services/collection/collection.service';
@@ -14,27 +14,31 @@ export class CollectionRegisterComponent implements OnInit {
   collection: Collection = new Collection();
   formCollection!: FormGroup;
 
-  constructor(private service: CollectionService, private router: Router) {}
+  constructor(private service: CollectionService, private router: Router, private fB: FormBuilder) {}
 
   ngOnInit(): void {
     this.createForm();
   }
 
   createForm() {
-    this.formCollection = new FormGroup({
-      collectionName: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      collectionResponsible: new FormControl('', [Validators.required, Validators.minLength(5)]),
-      collectionSeason: new FormControl('', [Validators.required, Validators.minLength(5)]),
-      collectionYear: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(4)]),
-      collectionBrand: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      collectionBudget: new FormControl('', [Validators.required, Validators.minLength(1)])
+    this.formCollection = this.fB.group({
+      collectionName: ['', [Validators.required, Validators.minLength(4)]],
+      collectionResponsible: ['', [Validators.required, Validators.minLength(5)]],
+      collectionSeason: ['', [Validators.required, Validators.minLength(5)]],
+      collectionYear: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(4)]],
+      collectionBrand: ['', [Validators.required, Validators.minLength(4)]],
+      collectionBudget: ['', [Validators.required, Validators.minLength(1)]]
     });
   }
 
   create(): void {
-    this.service.create(this.collection).subscribe(() => {
-      this.router.navigate(['/wm/collection']);
-      this.service.showMessage('Cadastro realizado com sucesso!', true);
-    });
+    if(this.formCollection.valid) {
+      this.service.create(this.formCollection.value).subscribe(() => {
+        this.router.navigate(['/wm/collection']);
+        this.service.showMessage('Cadastro realizado com sucesso!', true);
+      });
+    } else {
+      this.service.showMessage('Preencha todos os campos!', true);
+    }
   }
 }

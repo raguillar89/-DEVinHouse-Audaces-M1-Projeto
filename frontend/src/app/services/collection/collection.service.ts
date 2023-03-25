@@ -1,7 +1,8 @@
+import { query } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Observable, EMPTY } from 'rxjs';
+import { Observable, EMPTY, map } from 'rxjs';
 import { API_CONFIG } from 'src/app/environments/environments';
 import { Collection } from 'src/app/interface/collection.interface';
 
@@ -10,7 +11,7 @@ import { Collection } from 'src/app/interface/collection.interface';
 })
 export class CollectionService {
 
-  constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
+  constructor(private http: HttpClient, private snackBar: MatSnackBar, private items: Observable<Collection[]>) { }
 
   showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, 'X', {

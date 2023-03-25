@@ -45,10 +45,14 @@ export class ModelEditComponent implements OnInit {
   }
 
   update(): void {
-    this.service.update(this.model).subscribe(() => {
-      this.service.showMessage('Coleção Atualizada com Sucesso!', true);
-      this.router.navigate(['wm/model']);
-    })
+    if(!this.formModel.status){
+      this.service.showMessage('Preencha todas as informações', true);
+    } else {
+      this.service.update(this.model).subscribe(() => {
+        this.service.showMessage('Coleção Atualizada com Sucesso!', true);
+        this.router.navigate(['wm/model']);
+      })
+    }
   }
 
   delete(): void {
