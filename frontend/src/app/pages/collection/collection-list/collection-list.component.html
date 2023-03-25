@@ -18,12 +18,12 @@
 
       <ng-container matColumnDef="Estação - Lançamento">
         <th mat-header-cell *matHeaderCellDef> Estação - Lançamento </th>
-        <td mat-cell *matCellDef="let collection"  (click)="redirect(collection.id)"> {{collection.collectionSeason}} - {{collection.collectionYear}} </td>
+        <td mat-cell *matCellDef="let collection" (click)="redirect(collection.id)"> {{collection.collectionSeason}} - {{collection.collectionYear}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Modelos">
         <th mat-header-cell *matHeaderCellDef> Modelos </th>
-        <td mat-cell *matCellDef="let collection" (click)="redirect(collection.id)"> {{collection.collectionModelQuantity}} </td>
+        <td mat-cell *matCellDef="let collection" (click)="redirect(collection.id)"> </td>
       </ng-container>
 
       <ng-container matColumnDef="Orçamento">

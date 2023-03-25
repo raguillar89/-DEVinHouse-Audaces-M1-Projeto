@@ -15,49 +15,75 @@
       "userEmail": "joao.paulo@email.com",
       "userPassword": "12345678",
       "id": 2
+    },
+    {
+      "userName": "João Paulo",
+      "userCompany": "Flamengo",
+      "userCnpj": "22222222222222",
+      "userEmail": "flamengo@email.com",
+      "userPassword": "123456as",
+      "id": 3
     }
   ],
   "collections": [
     {
+      "id": 1,
       "collectionName": "Camisas de Futebol",
-      "collectionResponsible": "Matheus Freitas",
-      "collectionSeason": "Outono",
-      "collectionYear": 2024,
-      "collectionBrand": "Adidas",
-      "collectionBudget": 25000,
-      "id": 1
-    },
-    {
-      "collectionName": "Camisas de Futebol",
-      "collectionResponsible": "Matheus Freitas",
+      "collectionResponsible": "Priscila Pinho",
       "collectionSeason": "Verão",
       "collectionYear": 2023,
-      "collectionBrand": "Nike",
-      "collectionBudget": 31000,
+      "collectionBrand": "Adidas",
+      "collectionBudget": 23321
+    },
+    {
       "id": 2
     },
     {
-      "collectionName": "Camisas de Futebol",
-      "collectionResponsible": "Matheus Freitas",
-      "collectionSeason": "Outono",
-      "collectionYear": 2025,
-      "collectionBrand": "Puma",
-      "collectionBudget": 12000,
       "id": 3
     },
     {
       "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "collectionName": "dasas",
+      "collectionResponsible": "dsadas",
+      "collectionSeason": "dsadas",
+      "collectionYear": 1231,
+      "collectionBrand": "dasdas",
+      "collectionBudget": 453534,
+      "id": 6
     }
   ],
   "models": [
     {
+      "modelName": "Saia de Veludo",
+      "modelResponsible": "Priscila Pinho",
+      "modelType": "Saia",
+      "modelCollection": "Adidas",
+      "modelEmbroidery": "Sim",
+      "modelStamp": "Não",
+      "id": 1
+    },
+    {
       "modelName": "Camisetas Regatas",
       "modelResponsible": "Renan Pinho",
-      "modelType": "Calça",
-      "modelCollection": "Puma",
+      "modelType": "Camisa",
+      "modelCollection": "Adidas",
       "modelEmbroidery": "Não",
       "modelStamp": "Sim",
-      "id": 1
+      "id": 2
+    },
+    {
+      "modelName": "Bermudas",
+      "modelResponsible": "Renan Pinho",
+      "modelType": "Bermuda",
+      "modelCollection": "Adidas",
+      "modelEmbroidery": "Não",
+      "modelStamp": "Sim",
+      "id": 3
     }
   ]
 }
