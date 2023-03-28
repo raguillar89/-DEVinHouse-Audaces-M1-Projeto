@@ -5,37 +5,37 @@
 
       <mat-form-field class="halfWidth" appearance="fill">
           <mat-label>Nome da Coleção</mat-label>
-          <input [(ngModel)]="collection.collectionName" name="collectionName" formControlName="collectionName" type="text" matInput>
+          <input name="collectionName" formControlName="collectionName" type="text" matInput>
           <mat-icon matSuffix>perm_media</mat-icon>
       </mat-form-field>
 
       <mat-form-field class="halfWidth" appearance="fill">
           <mat-label>Responsável pela coleção</mat-label>
-          <input [(ngModel)]="collection.collectionResponsible" name="collectionResponsible" formControlName="collectionResponsible" type="text" matInput>
+          <input name="collectionResponsible" formControlName="collectionResponsible" type="text" matInput>
           <mat-icon matSuffix>person</mat-icon>
       </mat-form-field>
 
       <mat-form-field class="halfWidth" appearance="fill">
           <mat-label>Para qual estação?</mat-label>
-          <input [(ngModel)]="collection.collectionSeason" name="collectionSeason" formControlName="collectionSeason" type="text" matInput>
+          <input name="collectionSeason" formControlName="collectionSeason" type="text" matInput>
           <mat-icon matSuffix>sunny_snowing</mat-icon>
       </mat-form-field>
 
       <mat-form-field class="halfWidth" appearance="fill">
           <mat-label>Ano de Lançamento</mat-label>
-          <input [(ngModel)]="collection.collectionYear" name="collectionYear" formControlName="collectionYear" type="number" matInput>
+          <input name="collectionYear" formControlName="collectionYear" type="number" matInput>
           <mat-icon matSuffix>launcher_assistant_on</mat-icon>
       </mat-form-field>
 
       <mat-form-field class="halfWidth" appearance="fill">
         <mat-label>Para qual marca você está criando?</mat-label>
-        <input [(ngModel)]="collection.collectionBrand" name="collectionBrand" formControlName="collectionBrand" type="text" matInput>
+        <input name="collectionBrand" formControlName="collectionBrand" type="text" matInput>
         <mat-icon matSuffix>store</mat-icon>
       </mat-form-field>
 
       <mat-form-field class="halfWidth" appearance="fill">
         <mat-label>Qual é o orçamento desta coleção?</mat-label>
-        <input [(ngModel)]="collection.collectionBudget" name="collectionBudget" formControlName="collectionBudget" type="number" matInput>
+        <input name="collectionBudget" formControlName="collectionBudget" type="number" matInput>
         <mat-icon matSuffix>payments</mat-icon>
       </mat-form-field>
 
@@ -50,8 +50,6 @@
           </defs>
         </svg>
       </div>
-
-
 
       <div class="bts">
         <button (click)="delete()" class="mat-elevation-z4" mat-flat-button color="warn">Excluir</button>

@@ -24,33 +24,49 @@ export class CollectionEditComponent implements OnInit {
 
   createForm() {
     this.formCollection = this.fB.group({
-      collectionName: [this.collection.collectionName, [Validators.required, Validators.minLength(4)]],
-      collectionResponsible: [this.collection.collectionResponsible, [Validators.required, Validators.minLength(5)]],
-      collectionSeason: [this.collection.collectionSeason, [Validators.required, Validators.minLength(5)]],
-      collectionYear: [this.collection.collectionYear, [Validators.required, Validators.minLength(4), Validators.maxLength(4)]],
-      collectionBrand: [this.collection.collectionBudget, [Validators.required, Validators.minLength(4)]],
-      collectionBudget: [this.collection.collectionBudget, [Validators.required, Validators.minLength(1)]]
+      collectionName: ['', [Validators.required, Validators.minLength(4)]],
+      collectionResponsible: ['', [Validators.required, Validators.minLength(5)]],
+      collectionSeason: ['', [Validators.required, Validators.minLength(5)]],
+      collectionYear: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(4)]],
+      collectionBrand: ['', [Validators.required, Validators.minLength(4)]],
+      collectionBudget: ['', [Validators.required, Validators.minLength(1)]]
     });
   }
 
-  findById(): void {
-    this.service.findById(this.collection).subscribe(collection => {
+  findById():void {
+    this.service.findById(this.collection.id).subscribe(collection => {
       this.collection = collection;
+      this.formCollection.patchValue(this.collection);
     });
   }
 
   update(): void {
-    this.service.update(this.collection).subscribe(() => {
-      this.service.showMessage('Coleção Atualizada com Sucesso!', true);
-      this.router.navigate(['wm/collection']);
-    })
+    this.collection.collectionName = this.formCollection.value.collectionName;
+    this.collection.collectionResponsible = this.formCollection.value.collectionResponsible;
+    this.collection.collectionSeason = this.formCollection.value.collectionSeason;
+    this.collection.collectionYear = this.formCollection.value.collectionYear;
+    this.collection.collectionBrand = this.formCollection.value.collectionBrand;
+    this.collection.collectionBudget = this.formCollection.value.collectionBudget;
+
+    if(this.formCollection.valid) {
+      this.service.update(this.collection).subscribe(() => {
+        this.service.showMessage('Coleção Atualizada com Sucesso!', true);
+        this.router.navigate(['wm/collection']);
+      })
+    } else {
+      this.service.showMessage('Preencha todos os campos!', true);
+    }
   }
 
   delete(): void {
-    this.service.delete(this.collection.id).subscribe(() => {
-      this.service.showMessage('Coleção Excluída com Sucesso!', true);
-      this.router.navigate(['wm/collection']);
-    })
+    if(this.formCollection.valid) {
+      this.service.delete(this.collection.id).subscribe(() => {
+        this.service.showMessage('Coleção Excluída com Sucesso!', true);
+        this.router.navigate(['wm/collection']);
+      })
+    } else {
+      this.service.showMessage('Preencha todos os campos!', true);
+    }
   }
 
   /*

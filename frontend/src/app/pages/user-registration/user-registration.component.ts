@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/interface/user.interface';
 import { UserService } from 'src/app/services/user/user.service';
@@ -22,16 +22,16 @@ export class UserRegistrationComponent implements OnInit {
     this.createForm();
   }
 
-  constructor(private router: Router, private service: UserService) { }
+  constructor(private router: Router, private service: UserService, private fB: FormBuilder) { }
 
   createForm() {
-    this.formUserCreate = new FormGroup({
-      userName: new FormControl('', [Validators.required, Validators.minLength(5)]),
-      userCompany: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      userCnpj: new FormControl('', [Validators.required, Validators.minLength(10)]),
-      userEmail: new FormControl('', [Validators.required, Validators.minLength(10), Validators.pattern(this.emailPattern)]),
-      userPassword: new FormControl('', [Validators.required, Validators.minLength(8), Validators.pattern(this.passwordPattern)]),
-      userPasswordConfirmation: new FormControl('', [Validators.required, Validators.minLength(8), Validators.pattern(this.passwordPattern)])
+    this.formUserCreate = this.fB.group({
+      userName: ['', [Validators.required, Validators.minLength(5)]],
+      userCompany: ['', [Validators.required, Validators.minLength(4)]],
+      userCnpj: ['', [Validators.required, Validators.minLength(10)]],
+      userEmail: ['', [Validators.required, Validators.minLength(10), Validators.pattern(this.emailPattern)]],
+      userPassword: ['', [Validators.required, Validators.minLength(8), Validators.pattern(this.passwordPattern)]],
+      userPasswordConfirmation: ['', [Validators.required, Validators.minLength(8), Validators.pattern(this.passwordPattern)]]
     });
   }
 
@@ -51,13 +51,18 @@ export class UserRegistrationComponent implements OnInit {
       this.service.showMessage('Senhas divergentes, favor conferir.', true);
     } else {
       if(!dbEmail) {
-        this.service.create(this.user).subscribe(() => {
-          this.router.navigate(['/login']);
-          this.service.showMessage('Cadastro realizado com sucesso!', true);
-        });
+        if(this.formUserCreate.valid) {
+          this.service.create(this.formUserCreate.value).subscribe(() => {
+            this.router.navigate(['/login']);
+            this.service.showMessage('Cadastro realizado com sucesso!', true);
+          });
+        } else {
+          this.service.showMessage('Preencha todos os campos!', true);
+        }
       } else {
         this.service.showMessage('E-mail já cadastrado, favor conferir.', true);
       }
     }
   }
+
 }

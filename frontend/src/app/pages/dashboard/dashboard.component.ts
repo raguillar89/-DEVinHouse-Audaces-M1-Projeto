@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort, Sort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Collection } from 'src/app/interface/collection.interface';
 import { Model } from 'src/app/interface/model.interface';
 import { CollectionService } from 'src/app/services/collection/collection.service';
@@ -15,12 +19,20 @@ export class DashboardComponent {
   listModels: Model[] = [];
   collection: Collection = new Collection();
   listCollections: Collection[] = [];
+  sortedValue: Collection[] = [];
 
-  displayedColumns: string[] = ['Coleção', 'Responsável', 'Modelos', 'Orçamento'];
+  displayedColumns: string[] = ['collectionName', 'collectionResponsible', 'Modelos', 'collectionBudget'];
+  dataSource = new MatTableDataSource<Collection>(this.listCollections);
 
-  constructor(private modelService: ModelService, private collectionService: CollectionService) {}
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
+  constructor(private modelService: ModelService, private collectionService: CollectionService, private http: HttpClient) {
+    this.sortedValue = this.listCollections.slice();
+  }
 
   ngOnInit(): void {
+    this.ngAfterViewInit();
     this.findAllCollection();
     this.findAllModel();
   }
@@ -28,6 +40,11 @@ export class DashboardComponent {
   findAllCollection() {
     this.collectionService.findAll().subscribe((collections) => {
       this.listCollections = collections;
+      this.dataSource = new MatTableDataSource<Collection>(collections);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+      this.averageBudget();
+      this.getCollections();
     })
   }
 
@@ -35,5 +52,58 @@ export class DashboardComponent {
     this.modelService.findAll().subscribe((models) => {
       this.listModels = models;
     })
+  }
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
+
+  averageBudget() {
+    const sum = this.listCollections.reduce((acc, obj) => {
+      return acc + obj.collectionBudget;
+    }, 0)
+
+    const lgt = this.listCollections.length;
+    const total = sum / lgt;
+
+    return total;
+  }
+
+  sortValue(sort: Sort) {
+    const data = this.listCollections.slice();
+    if (!sort.active || sort.direction === '') {
+      this.sortedValue = data;
+      return;
+    }
+
+    this.sortedValue = data.sort((a, b) => {
+      const isAsc = sort.direction === 'asc';
+      switch (sort.active) {
+        case 'name':
+          return this.compare(a.collectionBudget, b.collectionBudget, isAsc);
+        default:
+          return 0;
+      }
+    });
+  }
+
+  compare(a: number | string, b: number | string, isAsc: boolean) {
+    return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+  }
+
+  getCollections() {
+    /*let count = this.listCollections
+    let clt = [];
+
+    for(let collection of count) {
+      if(this.listModels.filter( model => model.id == collection.id )) {
+        clt.push(count);
+      }
+    }
+    console.log(count)
+    console.log(clt)
+
+    return count;*/
   }
 }

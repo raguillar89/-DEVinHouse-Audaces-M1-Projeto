@@ -23,6 +23,15 @@
       "userEmail": "flamengo@email.com",
       "userPassword": "123456as",
       "id": 3
+    },
+    {
+      "userName": "afdsafas",
+      "userCompany": "fdsafsda",
+      "userCnpj": "56566666666666",
+      "userEmail": "renan.pidsnho@email.com",
+      "userPassword": "987654321",
+      "userPasswordConfirmation": "987654321",
+      "id": 6
     }
   ],
   "collections": [
@@ -33,19 +42,18 @@
       "collectionSeason": "Verão",
       "collectionYear": 2023,
       "collectionBrand": "Adidas",
-      "collectionBudget": 23321
+      "collectionModelQuantity": 0,
+      "collectionBudget": 233213
     },
     {
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
+      "id": 4,
+      "collectionName": "dsadsa",
+      "collectionResponsible": "dsadsa",
+      "collectionSeason": "dsadsa",
+      "collectionYear": 321321,
+      "collectionBrand": "sadsa",
+      "collectionModelQuantity": 0,
+      "collectionBudget": 32131
     },
     {
       "collectionName": "dasas",
@@ -53,25 +61,46 @@
       "collectionSeason": "dsadas",
       "collectionYear": 1231,
       "collectionBrand": "dasdas",
+      "collectionModelQuantity": 0,
       "collectionBudget": 453534,
       "id": 6
+    },
+    {
+      "collectionName": "Bermudas Esportivas",
+      "collectionResponsible": "Renan Pinho",
+      "collectionSeason": "Verão",
+      "collectionYear": 2025,
+      "collectionBrand": "Nike",
+      "collectionModelQuantity": 0,
+      "collectionBudget": 24680,
+      "id": 7
+    },
+    {
+      "collectionName": "hgfhfgd",
+      "collectionResponsible": "hfgdhfgdhfgd",
+      "collectionSeason": "hgfdhgfd",
+      "collectionYear": 4324,
+      "collectionBrand": "fdhgfd",
+      "collectionModelQuantity": 0,
+      "collectionBudget": 23423,
+      "id": 8
     }
   ],
   "models": [
     {
-      "modelName": "Saia de Veludo",
+      "modelName": "Saia Jeans",
       "modelResponsible": "Priscila Pinho",
       "modelType": "Saia",
-      "modelCollection": "Adidas",
-      "modelEmbroidery": "Sim",
-      "modelStamp": "Não",
+      "modelCollection": 1,
+      "modelEmbroidery": "Não",
+      "modelStamp": "Sim",
       "id": 1
     },
     {
       "modelName": "Camisetas Regatas",
       "modelResponsible": "Renan Pinho",
       "modelType": "Camisa",
-      "modelCollection": "Adidas",
+      "modelCollection": 1,
       "modelEmbroidery": "Não",
       "modelStamp": "Sim",
       "id": 2
@@ -80,10 +109,55 @@
       "modelName": "Bermudas",
       "modelResponsible": "Renan Pinho",
       "modelType": "Bermuda",
-      "modelCollection": "Adidas",
+      "modelCollection": 1,
       "modelEmbroidery": "Não",
       "modelStamp": "Sim",
       "id": 3
+    },
+    {
+      "modelName": "dsadsa",
+      "modelResponsible": "dsadsa",
+      "modelType": "Bermuda",
+      "modelCollection": 1,
+      "modelEmbroidery": "Não",
+      "modelStamp": "Sim",
+      "id": 4
+    },
+    {
+      "modelName": "dsdsa",
+      "modelResponsible": "sadsadsa",
+      "modelType": "Bermuda",
+      "modelCollection": 2,
+      "modelEmbroidery": "Sim",
+      "modelStamp": "Sim",
+      "id": 5
+    },
+    {
+      "modelName": "dsadsadsa",
+      "modelResponsible": "dsadsa",
+      "modelType": "Biquíni",
+      "modelCollection": 1,
+      "modelEmbroidery": "Sim",
+      "modelStamp": "Não",
+      "id": 6
+    },
+    {
+      "modelName": "gdsgsfdgsfd",
+      "modelResponsible": "gfdsgfds",
+      "modelType": "Biquíni",
+      "modelCollection": 1,
+      "modelEmbroidery": "Sim",
+      "modelStamp": "Não",
+      "id": 7
+    },
+    {
+      "modelName": "sfsdfsd",
+      "modelResponsible": "fdsfsd",
+      "modelType": "Biquíni",
+      "modelCollection": 4,
+      "modelEmbroidery": "Sim",
+      "modelStamp": "Não",
+      "id": 8
     }
   ]
 }

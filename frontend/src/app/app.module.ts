@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -18,9 +18,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSortModule } from '@angular/material/sort';
 import { RouterModule } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxMaskPipe, NgxMaskDirective, provideNgxMask } from 'ngx-mask';
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,6 +43,7 @@ import { ModelListComponent } from './pages/model/model-list/model-list.componen
 import { ModelRegisterComponent } from './pages/model/model-register/model-register.component';
 import { ModelEditComponent } from './pages/model/model-edit/model-edit.component';
 
+registerLocaleData(ptBr);
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,12 +87,13 @@ import { ModelEditComponent } from './pages/model/model-edit/model-edit.componen
     MatSnackBarModule,
     MatMenuModule,
     MatButtonModule,
+    MatSortModule,
     RouterModule,
     ToastrModule.forRoot(),
     NgxMaskPipe,
     NgxMaskDirective
   ],
-  providers: [provideNgxMask()],
+  providers: [provideNgxMask(),{ provide: LOCALE_ID, useValue: 'pt' },{ provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

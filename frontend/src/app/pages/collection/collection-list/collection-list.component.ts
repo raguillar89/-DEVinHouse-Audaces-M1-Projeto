@@ -1,9 +1,10 @@
+import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { API_CONFIG } from 'src/app/environments/environments';
 import { Collection } from 'src/app/interface/collection.interface';
 import { Model } from 'src/app/interface/model.interface';
 import { CollectionService } from 'src/app/services/collection/collection.service';
@@ -21,24 +22,26 @@ export class CollectionListComponent implements OnInit{
   model: Model = new Model();
   listModels: Model[] = [];
 
-  displayedColumns: string[] = ['Coleção', 'Responsável', 'Estação - Lançamento', 'Modelos', 'Orçamento'];
+  displayedColumns: string[] = ['collectionName', 'collectionResponsible', 'collectionSeason - collectionYear', 'Modelos', 'collectionBudget'];
   dataSource = new MatTableDataSource<Collection>(this.listCollections);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private service: CollectionService, private modelService: ModelService, private router: Router, private http: HttpClient) {}
 
   ngOnInit(): void {
+    this.ngAfterViewInit();
     this.findAll();
     this.findAllModels();
-    this.getCollections();
   }
 
   findAll() {
     this.service.findAll().subscribe((collections) => {
-      this.listCollections = collections;
+      this.listCollections = collections,
       this.dataSource = new MatTableDataSource<Collection>(collections);
       this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     })
   }
 
@@ -50,25 +53,10 @@ export class CollectionListComponent implements OnInit{
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
   redirect(id: any) {
     this.router.navigate([`wm/collection/clEdit/${id}`]);
-  }
-
-  getCollections() {
-    /*let colecoesModificadas = []
-
-    for (let i = 0; i <= this.listCollections.length; i++) {
-      const modelosColecao = this.listModels.map(q => q.id === this.collection.id)
-      const obj = {
-        qtdModelos: modelosColecao.length
-      }
-
-      colecoesModificadas.push(obj)
-    }
-    console.log(colecoesModificadas);
-
-    return colecoesModificadas*/
   }
 }

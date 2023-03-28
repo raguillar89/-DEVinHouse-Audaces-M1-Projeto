@@ -5,7 +5,7 @@ export interface ICollection{
   collectionSeason: string,
   collectionYear: string,
   collectionBrand: string,
-  collectionModelQuantity: any,
+  collectionModelQuantity: number,
   collectionBudget: number
 }
 
@@ -16,6 +16,6 @@ export class Collection implements ICollection {
   collectionSeason!: string;
   collectionYear!: string;
   collectionBrand!: string;
-  collectionModelQuantity!: any;
+  collectionModelQuantity!: number;
   collectionBudget!: number;
 }
