@@ -11,7 +11,7 @@ import { Collection } from 'src/app/interface/collection.interface';
 })
 export class CollectionService {
 
-  constructor(private http: HttpClient, private snackBar: MatSnackBar, private items: Observable<Collection[]>) { }
+  constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
 
   showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, 'X', {

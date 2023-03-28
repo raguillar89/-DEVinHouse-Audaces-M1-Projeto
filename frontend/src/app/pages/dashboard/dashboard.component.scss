@@ -24,17 +24,13 @@ h2 {
   font-size: 1.1rem;
 }
 
-th {
-  text-align: center;
-}
-
 .card-collection {
   display: flex;
   margin-bottom: 25px;
 }
 
 .card {
-  width: 250px;
+  width: 300px;
   height: 150px;
   margin: auto;
   border-radius: 8px;
@@ -45,4 +41,29 @@ mat-card-title {
   text-align: left;
   margin-top: 10px;
   margin-left: 20px;
+}
+
+.subItems {
+  margin-top: 50px;
+}
+
+.thirdItems {
+  display: inline-flex;
+  margin-left: 20px;
+}
+
+.percentual {
+  font-size: 1rem;
+  margin: 5px;
+  color: green;
+}
+
+span {
+  font-size: 2rem;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.budgetText {
+  margin-top: 5px;
 }

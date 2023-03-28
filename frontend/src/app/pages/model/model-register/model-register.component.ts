@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Collection } from 'src/app/interface/collection.interface';
 import { Model } from 'src/app/interface/model.interface';
@@ -18,7 +18,7 @@ export class ModelRegisterComponent implements OnInit {
   collection: Collection = new Collection();
   listCollections: Collection[] = [];
 
-  constructor(private service: ModelService, private router: Router, private collectionService: CollectionService) {}
+  constructor(private service: ModelService, private router: Router, private collectionService: CollectionService, private fB: FormBuilder) {}
 
   ngOnInit(): void {
     this.createForm();
@@ -26,21 +26,25 @@ export class ModelRegisterComponent implements OnInit {
   }
 
   createForm() {
-    this.formModel = new FormGroup({
-      modelName: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      modelResponsible: new FormControl('', [Validators.required, Validators.minLength(5)]),
-      modelType: new FormControl('', [Validators.required]),
-      modelCollection: new FormControl('', [Validators.required]),
-      modelEmbroidery: new FormControl('', [Validators.required]),
-      modelStamp: new FormControl('', [Validators.required])
+    this.formModel = this.fB.group({
+      modelName: ['', [Validators.required, Validators.minLength(4)]],
+      modelResponsible: ['', [Validators.required, Validators.minLength(5)]],
+      modelType: ['', [Validators.required]],
+      modelCollection: ['', [Validators.required]],
+      modelEmbroidery: ['', [Validators.required]],
+      modelStamp: ['', [Validators.required]]
     });
   }
 
   create(): void {
-    this.service.create(this.model).subscribe(() => {
-      this.router.navigate(['/wm/model']);
-      this.service.showMessage('Cadastro realizado com sucesso!', true);
-    });
+    if(this.formModel.valid) {
+      this.service.create(this.formModel.value).subscribe(() => {
+        this.router.navigate(['/wm/model']);
+        this.service.showMessage('Cadastro realizado com sucesso!', true);
+      });
+    } else {
+      this.service.showMessage('Preencha todos os campos!', true);
+    }
   }
 
   findAllCollection() {

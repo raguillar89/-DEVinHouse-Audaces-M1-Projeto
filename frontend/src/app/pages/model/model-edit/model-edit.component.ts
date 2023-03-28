@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Collection } from 'src/app/interface/collection.interface';
 import { Model } from 'src/app/interface/model.interface';
@@ -18,7 +18,7 @@ export class ModelEditComponent implements OnInit {
   collection: Collection = new Collection();
   listCollections: Collection[] = [];
 
-  constructor(private service: ModelService, private router: Router, private route: ActivatedRoute, private collectionService: CollectionService) {}
+  constructor(private service: ModelService, private router: Router, private route: ActivatedRoute, private collectionService: CollectionService, private fB: FormBuilder) {}
 
   ngOnInit(): void {
     this.model.id = this.route.snapshot.paramMap.get('id');
@@ -28,24 +28,32 @@ export class ModelEditComponent implements OnInit {
   }
 
   createForm() {
-    this.formModel = new FormGroup({
-      modelName: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      modelResponsible: new FormControl('', [Validators.required, Validators.minLength(5)]),
-      modelType: new FormControl('', [Validators.required]),
-      modelCollection: new FormControl('', [Validators.required]),
-      modelEmbroidery: new FormControl('', [Validators.required]),
-      modelStamp: new FormControl('', [Validators.required])
+    this.formModel = this.fB.group({
+      modelName: ['', [Validators.required, Validators.minLength(4)]],
+      modelResponsible: ['', [Validators.required, Validators.minLength(5)]],
+      modelType: ['', [Validators.required]],
+      modelCollection: ['', [Validators.required]],
+      modelEmbroidery: ['', [Validators.required]],
+      modelStamp: ['', [Validators.required]]
     });
   }
 
   findById(): void {
     this.service.findById(this.model.id).subscribe(model => {
       this.model = model;
+      this.formModel.patchValue(this.model);
     });
   }
 
   update(): void {
-    if(!this.formModel.status){
+    this.model.modelName = this.formModel.value.modelName;
+    this.model.modelResponsible = this.formModel.value.modelResponsible;
+    this.model.modelType = this.formModel.value.modelType;
+    this.model.modelCollection = this.formModel.value.modelCollection;
+    this.model.modelEmbroidery = this.formModel.value.modelEmbroidery;
+    this.model.modelStamp = this.formModel.value.modelStamp;
+
+    if(!this.formModel.valid){
       this.service.showMessage('Preencha todas as informações', true);
     } else {
       this.service.update(this.model).subscribe(() => {
@@ -56,10 +64,14 @@ export class ModelEditComponent implements OnInit {
   }
 
   delete(): void {
-    this.service.delete(this.model.id).subscribe(() => {
-      this.service.showMessage('Coleção Excluída com Sucesso!', true);
-      this.router.navigate(['wm/model']);
-    })
+    if(this.formModel.valid) {
+      this.service.delete(this.model.id).subscribe(() => {
+        this.service.showMessage('Coleção Excluída com Sucesso!', true);
+        this.router.navigate(['wm/model']);
+      })
+    } else {
+      this.service.showMessage('Preencha todos os campos!', true);
+    }
   }
 
   findAllCollection() {

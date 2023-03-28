@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit {
     return false;
   }
 
-  extractUserName() {
+  extractUser() {
     const userName = this.user.userName;
     localStorage.setItem('userName', userName);
   }
@@ -74,7 +74,7 @@ export class LoginComponent implements OnInit {
     this.findUser(this.formUser);
     if(this.correctPassword(this.formUser, this.user) ) {
       this.createLocalStorage(true);
-      this.extractUserName();
+      this.extractUser();
       this.service.showMessage('Login Realizado com Sucesso.')
       this.router.navigate(['/wm']);
     } else {
