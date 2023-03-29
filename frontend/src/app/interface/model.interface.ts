@@ -3,7 +3,7 @@ export interface IModel{
   modelName: string,
   modelType: string,
   modelResponsible: string,
-  modelCollection: string,
+  modelCollection: number,
   modelEmbroidery: string,
   modelStamp: string
 }
@@ -13,7 +13,7 @@ export class Model implements IModel {
   modelName!: string;
   modelType!: string;
   modelResponsible!: string;
-  modelCollection!: string;
+  modelCollection!: number;
   modelEmbroidery!: string;
   modelStamp!: string;
 }

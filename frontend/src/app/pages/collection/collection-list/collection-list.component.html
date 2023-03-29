@@ -21,7 +21,7 @@
         <td mat-cell *matCellDef="let collection" (click)="redirect(collection.id)"> {{collection.collectionSeason}} - {{collection.collectionYear}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="Modelos">
+      <ng-container matColumnDef="collectionModelQuantity">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Modelos </th>
         <td mat-cell *matCellDef="let collection" (click)="redirect(collection.id)"> {{collection.collectionModelQuantity}} </td>
       </ng-container>

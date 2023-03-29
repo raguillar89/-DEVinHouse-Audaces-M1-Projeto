@@ -1,6 +1,6 @@
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -23,7 +23,7 @@ export class CollectionListComponent implements OnInit{
   listModels: Model[] = [];
   collectionModelQtd: any[] =[];
 
-  displayedColumns: string[] = ['collectionName', 'collectionResponsible', 'collectionSeason - collectionYear', 'Modelos', 'collectionBudget'];
+  displayedColumns: string[] = ['collectionName', 'collectionResponsible', 'collectionSeason - collectionYear', 'collectionModelQuantity', 'collectionBudget'];
   dataSource = new MatTableDataSource<Collection>(this.listCollections);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -45,6 +45,9 @@ export class CollectionListComponent implements OnInit{
       this.dataSource.sort = this.sort;
       setTimeout(() => {
         this.collectionModelQtd = this.getModelQuantity();
+        this.dataSource = new MatTableDataSource<Collection>(this.collectionModelQtd);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
       }, 100);
     })
   }
@@ -68,14 +71,10 @@ export class CollectionListComponent implements OnInit{
     const returnValue: any[] = [];
     this.listCollections.forEach((collection, i) => {
       const modelByCollection = this.listModels.filter((model) => model.modelCollection === collection.id)
-      console.log(collection.id)
-      console.log(this.listCollections[i])
-      console.log(this.listModels)
       const obj = {
         ...this.listCollections[i],
         collectionModelQuantity: modelByCollection.length
       }
-      console.log(obj)
       returnValue.push(obj);
     })
     return returnValue;

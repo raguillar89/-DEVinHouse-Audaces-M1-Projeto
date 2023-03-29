@@ -37,9 +37,9 @@
         <th mat-header-cell *matHeaderCellDef> Responsável </th>
         <td mat-cell *matCellDef="let collection"> {{collection.collectionResponsible}} </td>
       </ng-container>
-      <ng-container matColumnDef="Modelos">
+      <ng-container matColumnDef="collectionModelQuantity">
         <th mat-header-cell *matHeaderCellDef> Modelos </th>
-        <td mat-cell *matCellDef="let collection">  </td>
+        <td mat-cell *matCellDef="let collection"> {{collection.collectionModelQuantity}} </td>
       </ng-container>
       <ng-container matColumnDef="collectionBudget">
         <th mat-header-cell *matHeaderCellDef mat-sort-header="collectionBudget"> Orçamento </th>

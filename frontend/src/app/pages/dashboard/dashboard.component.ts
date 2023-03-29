@@ -20,8 +20,9 @@ export class DashboardComponent {
   collection: Collection = new Collection();
   listCollections: Collection[] = [];
   sortedValue: Collection[] = [];
+  collectionModelQtd: any[] = [];
 
-  displayedColumns: string[] = ['collectionName', 'collectionResponsible', 'Modelos', 'collectionBudget'];
+  displayedColumns: string[] = ['collectionName', 'collectionResponsible', 'collectionModelQuantity', 'collectionBudget'];
   dataSource = new MatTableDataSource<Collection>(this.listCollections);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -44,6 +45,12 @@ export class DashboardComponent {
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
       this.averageBudget();
+      setTimeout(() => {
+        this.collectionModelQtd = this.getModelQuantity();
+        this.dataSource = new MatTableDataSource<Collection>(this.collectionModelQtd);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+      }, 100);
     })
   }
 
@@ -89,5 +96,18 @@ export class DashboardComponent {
 
   compare(a: number | string, b: number | string, isAsc: boolean) {
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+  }
+
+  getModelQuantity() {
+    const returnValue: any[] = [];
+    this.listCollections.forEach((collection, i) => {
+      const modelByCollection = this.listModels.filter((model) => model.modelCollection === collection.id)
+      const obj = {
+        ...this.listCollections[i],
+        collectionModelQuantity: modelByCollection.length
+      }
+      returnValue.push(obj);
+    })
+    return returnValue;
   }
 }
