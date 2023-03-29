@@ -42,6 +42,7 @@ import { CollectionEditComponent } from './pages/collection/collection-edit/coll
 import { ModelListComponent } from './pages/model/model-list/model-list.component';
 import { ModelRegisterComponent } from './pages/model/model-register/model-register.component';
 import { ModelEditComponent } from './pages/model/model-edit/model-edit.component';
+import { PageUnderConstructionComponent } from './pages/page-under-construction/page-under-construction.component';
 
 registerLocaleData(ptBr);
 @NgModule({
@@ -61,7 +62,8 @@ registerLocaleData(ptBr);
     CollectionEditComponent,
     ModelListComponent,
     ModelRegisterComponent,
-    ModelEditComponent
+    ModelEditComponent,
+    PageUnderConstructionComponent
   ],
   imports: [
     BrowserModule,
