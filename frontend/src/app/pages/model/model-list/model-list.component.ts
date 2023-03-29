@@ -1,9 +1,12 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { Collection } from 'src/app/interface/collection.interface';
 import { Model } from 'src/app/interface/model.interface';
+import { CollectionService } from 'src/app/services/collection/collection.service';
 import { ModelService } from 'src/app/services/model/model.service';
 
 @Component({
@@ -15,6 +18,8 @@ export class ModelListComponent  implements OnInit{
 
   model: Model = new Model();
   listModels: Model[] = [];
+  collection: Collection = new Collection();
+  listCollections: Collection[] = [];
 
   displayedColumns: string[] = ['id', 'modelName', 'modelResponsible', 'modelCollection'];
   dataSource = new MatTableDataSource<Model>(this.listModels);
@@ -22,11 +27,12 @@ export class ModelListComponent  implements OnInit{
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private service: ModelService, private router: Router) {}
+  constructor(private service: ModelService, private router: Router, private collectionService: CollectionService, private http: HttpClient) {}
 
   ngOnInit(): void {
     this.ngAfterViewInit();
     this.findAll();
+    this.findAllCollections();
   }
 
   findAll() {
@@ -35,6 +41,12 @@ export class ModelListComponent  implements OnInit{
       this.dataSource = new MatTableDataSource<Model>(models);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+    })
+  }
+
+  findAllCollections() {
+    this.collectionService.findAll().subscribe((collections) => {
+      this.listCollections = collections;
     })
   }
 
@@ -47,4 +59,7 @@ export class ModelListComponent  implements OnInit{
     this.router.navigate([`wm/model/mlEdit/${id}`]);
   }
 
+  bringCollectionName() {
+
+  }
 }

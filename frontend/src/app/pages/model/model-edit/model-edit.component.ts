@@ -17,6 +17,7 @@ export class ModelEditComponent implements OnInit {
   formModel!: FormGroup;
   collection: Collection = new Collection();
   listCollections: Collection[] = [];
+  listModels: Model[] = [];
 
   constructor(private service: ModelService, private router: Router, private route: ActivatedRoute, private collectionService: CollectionService, private fB: FormBuilder) {}
 
