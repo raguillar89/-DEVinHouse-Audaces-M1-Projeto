@@ -20,6 +20,7 @@ export class ModelListComponent  implements OnInit{
   listModels: Model[] = [];
   collection: Collection = new Collection();
   listCollections: Collection[] = [];
+  result: any;
 
   displayedColumns: string[] = ['id', 'modelName', 'modelResponsible', 'modelCollection'];
   dataSource = new MatTableDataSource<Model>(this.listModels);
@@ -59,7 +60,7 @@ export class ModelListComponent  implements OnInit{
     this.router.navigate([`wm/model/mlEdit/${id}`]);
   }
 
-  bringCollectionName() {
-
+  bringCollectionName(id: number) {
+    return this.listCollections.find((collection) => collection.id === id)?.collectionBrand;
   }
 }

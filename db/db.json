@@ -36,59 +36,36 @@
   ],
   "collections": [
     {
-      "id": 1,
-      "collectionName": "Camisas de Futebol",
-      "collectionResponsible": "Priscila Pinho",
+      "collectionName": "Camisas Esportivas",
+      "collectionResponsible": "Renan Pinho",
       "collectionSeason": "Verão",
       "collectionYear": 2023,
       "collectionBrand": "Adidas",
-      "collectionModelQuantity": 0,
-      "collectionBudget": 233213
-    },
-    {
-      "id": 4,
-      "collectionName": "dsadsa",
-      "collectionResponsible": "dsadsa",
-      "collectionSeason": "dsadsa",
-      "collectionYear": 321321,
-      "collectionBrand": "sadsa",
-      "collectionModelQuantity": 0,
-      "collectionBudget": 32131
-    },
-    {
-      "collectionName": "dasas",
-      "collectionResponsible": "dsadas",
-      "collectionSeason": "dsadas",
-      "collectionYear": 1231,
-      "collectionBrand": "dasdas",
-      "collectionModelQuantity": 0,
-      "collectionBudget": 453534,
-      "id": 6
+      "collectionBudget": 21000,
+      "id": 1
     },
     {
       "collectionName": "Bermudas Esportivas",
-      "collectionResponsible": "Renan Pinho",
+      "collectionResponsible": "Yan Esteves",
       "collectionSeason": "Verão",
-      "collectionYear": 2025,
+      "collectionYear": 2023,
       "collectionBrand": "Nike",
-      "collectionModelQuantity": 0,
-      "collectionBudget": 24680,
-      "id": 7
+      "collectionBudget": 12050,
+      "id": 2
     },
     {
-      "collectionName": "hgfhfgd",
-      "collectionResponsible": "hfgdhfgdhfgd",
-      "collectionSeason": "hgfdhgfd",
-      "collectionYear": 4324,
-      "collectionBrand": "fdhgfd",
-      "collectionModelQuantity": 0,
-      "collectionBudget": 23423,
-      "id": 8
+      "collectionName": "Calça Esportiva",
+      "collectionResponsible": "Matheus Freitas",
+      "collectionSeason": "Verão",
+      "collectionYear": 2023,
+      "collectionBrand": "Puma",
+      "collectionBudget": 9805,
+      "id": 3
     }
   ],
   "models": [
     {
-      "modelName": "Camisetas Regatas",
+      "modelName": "Camisa do Flamengo",
       "modelResponsible": "Renan Pinho",
       "modelType": "Camisa",
       "modelCollection": 1,
@@ -97,76 +74,22 @@
       "id": 1
     },
     {
-      "modelName": "Camisetas Regatas",
-      "modelResponsible": "Renan Pinho",
-      "modelType": "Camisa",
-      "modelCollection": 1,
+      "modelName": "Bermuda do Vasco",
+      "modelResponsible": "Yan Esteves",
+      "modelType": "Bermuda",
+      "modelCollection": 2,
       "modelEmbroidery": "Não",
       "modelStamp": "Sim",
       "id": 2
     },
     {
-      "modelName": "Bermudas",
+      "modelName": "Calça do Flamengo",
       "modelResponsible": "Renan Pinho",
-      "modelType": "Bermuda",
-      "modelCollection": 1,
-      "modelEmbroidery": "Não",
+      "modelType": "Calça",
+      "modelCollection": 3,
+      "modelEmbroidery": "Sim",
       "modelStamp": "Sim",
       "id": 3
-    },
-    {
-      "modelName": "dsadsa",
-      "modelResponsible": "dsadsa",
-      "modelType": "Bermuda",
-      "modelCollection": 1,
-      "modelEmbroidery": "Não",
-      "modelStamp": "Sim",
-      "id": 4
-    },
-    {
-      "modelName": "dsdsa",
-      "modelResponsible": "sadsadsa",
-      "modelType": "Bermuda",
-      "modelCollection": 2,
-      "modelEmbroidery": "Sim",
-      "modelStamp": "Sim",
-      "id": 5
-    },
-    {
-      "modelName": "dsadsadsa",
-      "modelResponsible": "dsadsa",
-      "modelType": "Biquíni",
-      "modelCollection": 1,
-      "modelEmbroidery": "Sim",
-      "modelStamp": "Não",
-      "id": 6
-    },
-    {
-      "modelName": "gdsgsfdgsfd",
-      "modelResponsible": "gfdsgfds",
-      "modelType": "Biquíni",
-      "modelCollection": 1,
-      "modelEmbroidery": "Sim",
-      "modelStamp": "Não",
-      "id": 7
-    },
-    {
-      "modelName": "sfsdfsd",
-      "modelResponsible": "fdsfsd",
-      "modelType": "Biquíni",
-      "modelCollection": 4,
-      "modelEmbroidery": "Sim",
-      "modelStamp": "Não",
-      "id": 8
-    },
-    {
-      "modelName": "Camisetas Regatas",
-      "modelResponsible": "Renan Pinho",
-      "modelType": "Camisa",
-      "modelCollection": 1,
-      "modelEmbroidery": "Não",
-      "modelStamp": "Sim",
-      "id": 9
     }
   ]
 }

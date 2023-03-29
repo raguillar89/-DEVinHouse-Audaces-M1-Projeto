@@ -1,19 +1,25 @@
-<div class="box">
-  <button class="menuBox" mat-button [matMenuTriggerFor]="menu">
-    <mat-icon class="expand_more" mat-button>expand_more</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <a mat-menu-item>
-      <mat-icon>person</mat-icon>
-      <label>Conta</label>
-    </a>
-    <a mat-menu-item>
-      <mat-icon>settings</mat-icon>
-      <label>Configurações</label>
-    </a>
-    <a mat-menu-item routerLink="">
-      <mat-icon>logout</mat-icon>
-      <label>Logout</label>
-    </a>
-  </mat-menu>
+<div class="container">
+  <div class="notifications">
+    <mat-icon class="notification">notifications</mat-icon>
+  </div>
+  <div class="box">
+    <button class="menuBox" mat-button [matMenuTriggerFor]="menu">
+      <mat-icon class="expand_more" mat-button>expand_more</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a mat-menu-item>
+        <mat-icon>person</mat-icon>
+        <label>Conta</label>
+      </a>
+      <a mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <label>Configurações</label>
+      </a>
+      <a mat-menu-item routerLink="">
+        <mat-icon>logout</mat-icon>
+        <label>Logout</label>
+      </a>
+    </mat-menu>
+  </div>
+
 </div>
