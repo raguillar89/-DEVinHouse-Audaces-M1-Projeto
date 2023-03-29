@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { ModelEditComponent } from './pages/model/model-edit/model-edit.component';
 import { ModelListComponent } from './pages/model/model-list/model-list.component';
 import { ModelRegisterComponent } from './pages/model/model-register/model-register.component';
+import { PageUnderConstructionComponent } from './pages/page-under-construction/page-under-construction.component';
 import { RedefinePasswordComponent } from './pages/redefine-password/redefine-password.component';
 import { SedingConfirmationComponent } from './pages/seding-confirmation/seding-confirmation.component';
 import { UserRegistrationComponent } from './pages/user-registration/user-registration.component';
@@ -33,7 +34,9 @@ const routes: Routes = [
 
     { path: 'model', component: ModelListComponent },
     { path: 'model/mlRegister', component: ModelRegisterComponent },
-    { path: 'model/mlEdit/:id', component: ModelEditComponent }
+    { path: 'model/mlEdit/:id', component: ModelEditComponent },
+
+    { path: 'page-under-construction', component: PageUnderConstructionComponent }
   ]}
 ];
 
