@@ -1,4 +1,4 @@
-<h1>Criar Modelo</h1>
+<h1>Editar Modelo</h1>
 <div class="container mat-elevation-z8">
 
   <form [formGroup]="formModel" class="form" (ngSubmit)="update()">
@@ -33,7 +33,7 @@
       <mat-form-field class="halfWidth" appearance="fill">
         <mat-label>Selecionar coleção</mat-label>
         <mat-select name="modelCollection" formControlName="modelCollection">
-          <mat-option *ngFor="let collection of listCollections" [value]="collection.collectionBrand">
+          <mat-option *ngFor="let collection of listCollections" [value]="model.modelCollection">
             {{collection.collectionBrand}}
           </mat-option>
         </mat-select>

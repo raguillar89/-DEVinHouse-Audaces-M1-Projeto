@@ -44,7 +44,6 @@ export class DashboardComponent {
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
       this.averageBudget();
-      this.getCollections();
     })
   }
 
@@ -90,20 +89,5 @@ export class DashboardComponent {
 
   compare(a: number | string, b: number | string, isAsc: boolean) {
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
-  }
-
-  getCollections() {
-    /*let count = this.listCollections
-    let clt = [];
-
-    for(let collection of count) {
-      if(this.listModels.filter( model => model.id == collection.id )) {
-        clt.push(count);
-      }
-    }
-    console.log(count)
-    console.log(clt)
-
-    return count;*/
   }
 }

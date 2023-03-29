@@ -4,11 +4,11 @@
   <div class="card-collection">
     <mat-card class="card">
       <mat-card-title>Coleções</mat-card-title>
-      <span>{{listModels.length}}</span>
+      <span>{{listCollections.length}}</span>
     </mat-card>
     <mat-card class="card">
       <mat-card-title>Modelos</mat-card-title>
-      <span>{{listCollections.length}}</span>
+      <span>{{listModels.length}}</span>
     </mat-card>
     <mat-card class="card">
       <mat-card-title>Orçamento Médio (R$)</mat-card-title>
@@ -39,7 +39,7 @@
       </ng-container>
       <ng-container matColumnDef="Modelos">
         <th mat-header-cell *matHeaderCellDef> Modelos </th>
-        <td mat-cell *matCellDef="let collection"> {{getCollections()}} </td>
+        <td mat-cell *matCellDef="let collection">  </td>
       </ng-container>
       <ng-container matColumnDef="collectionBudget">
         <th mat-header-cell *matHeaderCellDef mat-sort-header="collectionBudget"> Orçamento </th>

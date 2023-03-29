@@ -23,7 +23,7 @@
 
       <ng-container matColumnDef="Modelos">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Modelos </th>
-        <td mat-cell *matCellDef="let collection" (click)="redirect(collection.id)"></td>
+        <td mat-cell *matCellDef="let collection" (click)="redirect(collection.id)"> {{collection.collectionModelQuantity}} </td>
       </ng-container>
 
       <ng-container matColumnDef="collectionBudget">

@@ -21,6 +21,7 @@ export class CollectionListComponent implements OnInit{
   listCollections: Collection[] = [];
   model: Model = new Model();
   listModels: Model[] = [];
+  collectionModelQtd: any[] =[];
 
   displayedColumns: string[] = ['collectionName', 'collectionResponsible', 'collectionSeason - collectionYear', 'Modelos', 'collectionBudget'];
   dataSource = new MatTableDataSource<Collection>(this.listCollections);
@@ -42,6 +43,9 @@ export class CollectionListComponent implements OnInit{
       this.dataSource = new MatTableDataSource<Collection>(collections);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+      setTimeout(() => {
+        this.collectionModelQtd = this.getModelQuantity();
+      }, 100);
     })
   }
 
@@ -58,5 +62,22 @@ export class CollectionListComponent implements OnInit{
 
   redirect(id: any) {
     this.router.navigate([`wm/collection/clEdit/${id}`]);
+  }
+
+  getModelQuantity() {
+    const returnValue: any[] = [];
+    this.listCollections.forEach((collection, i) => {
+      const modelByCollection = this.listModels.filter((model) => model.modelCollection === collection.id)
+      console.log(collection.id)
+      console.log(this.listCollections[i])
+      console.log(this.listModels)
+      const obj = {
+        ...this.listCollections[i],
+        collectionModelQuantity: modelByCollection.length
+      }
+      console.log(obj)
+      returnValue.push(obj);
+    })
+    return returnValue;
   }
 }

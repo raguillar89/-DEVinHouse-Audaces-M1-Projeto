@@ -88,9 +88,9 @@
   ],
   "models": [
     {
-      "modelName": "Saia Jeans",
-      "modelResponsible": "Priscila Pinho",
-      "modelType": "Saia",
+      "modelName": "Camisetas Regatas",
+      "modelResponsible": "Renan Pinho",
+      "modelType": "Camisa",
       "modelCollection": 1,
       "modelEmbroidery": "Não",
       "modelStamp": "Sim",
@@ -158,6 +158,15 @@
       "modelEmbroidery": "Sim",
       "modelStamp": "Não",
       "id": 8
+    },
+    {
+      "modelName": "Camisetas Regatas",
+      "modelResponsible": "Renan Pinho",
+      "modelType": "Camisa",
+      "modelCollection": 1,
+      "modelEmbroidery": "Não",
+      "modelStamp": "Sim",
+      "id": 9
     }
   ]
 }
