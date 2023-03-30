@@ -7,6 +7,7 @@ import { CollectionListComponent } from './pages/collection/collection-list/coll
 import { CollectionRegisterComponent } from './pages/collection/collection-register/collection-register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { GetHelpListComponent } from './pages/get-help/get-help-list/get-help-list.component';
+import { GetHelpRegisterComponent } from './pages/get-help/get-help-register/get-help-register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ModelEditComponent } from './pages/model/model-edit/model-edit.component';
 import { ModelListComponent } from './pages/model/model-list/model-list.component';
@@ -39,7 +40,7 @@ const routes: Routes = [
     { path: 'model/mlEdit/:id', component: ModelEditComponent },
 
     { path: 'getHelp', component: GetHelpListComponent },
-
+    { path: 'getHelp/ghRegister', component: GetHelpRegisterComponent },
 
     { path: 'comments', component: PageUnderConstructionComponent },
     { path: 'settings', component: PageUnderConstructionComponent },
