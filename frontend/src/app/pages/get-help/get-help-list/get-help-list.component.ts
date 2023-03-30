@@ -11,7 +11,7 @@ import { GetHelpService } from 'src/app/services/getHelp/get-help.service';
 })
 export class GetHelpListComponent  implements OnInit{
 
-  collection: GetHelp = new GetHelp();
+  getHelp: GetHelp = new GetHelp();
   listGetHelp: GetHelp[] = [];
 
   constructor(private service: GetHelpService, private router: Router, private http: HttpClient) {}
