@@ -83,6 +83,42 @@
       "collectionBrand": "Puma",
       "collectionBudget": 9805,
       "id": 3
+    },
+    {
+      "collectionName": "Boné Esportivo",
+      "collectionResponsible": "Renan Pinho",
+      "collectionSeason": "Verão",
+      "collectionYear": 2023,
+      "collectionBrand": "Adidas",
+      "collectionBudget": 32600,
+      "id": 4
+    },
+    {
+      "collectionName": "Bolsa Esportivas",
+      "collectionResponsible": "Yan Esteves",
+      "collectionSeason": "Verão",
+      "collectionYear": 2023,
+      "collectionBrand": "Nike",
+      "collectionBudget": 24590,
+      "id": 5
+    },
+    {
+      "collectionName": "Saia Jeans",
+      "collectionResponsible": "Matheus Freitas",
+      "collectionSeason": "Outono",
+      "collectionYear": 2024,
+      "collectionBrand": "Puma",
+      "collectionBudget": 14760,
+      "id": 6
+    },
+    {
+      "collectionName": "Camisas Regatas",
+      "collectionResponsible": "Yan Esteves",
+      "collectionSeason": "Primavera",
+      "collectionYear": 2024,
+      "collectionBrand": "Adidas",
+      "collectionBudget": 17500,
+      "id": 7
     }
   ],
   "models": [
