@@ -46,6 +46,7 @@ import { PageUnderConstructionComponent } from './pages/page-under-construction/
 import { UserEditComponent } from './pages/user/user-edit/user-edit.component';
 import { GetHelpListComponent } from './pages/get-help/get-help-list/get-help-list.component';
 import { GetHelpRegisterComponent } from './pages/get-help/get-help-register/get-help-register.component';
+import { GetHelpEditComponent } from './pages/get-help/get-help-edit/get-help-edit.component';
 
 registerLocaleData(ptBr);
 @NgModule({
@@ -69,7 +70,8 @@ registerLocaleData(ptBr);
     PageUnderConstructionComponent,
     UserEditComponent,
     GetHelpListComponent,
-    GetHelpRegisterComponent
+    GetHelpRegisterComponent,
+    GetHelpEditComponent
   ],
   imports: [
     BrowserModule,
