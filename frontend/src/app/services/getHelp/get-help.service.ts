@@ -30,7 +30,19 @@ export class GetHelpService {
     return this.http.get<GetHelp[]>(`${API_CONFIG.baseUrl}/gethelp`);
   }
 
+  findById(id: any): Observable<GetHelp> {
+    return this.http.get<GetHelp>(`${API_CONFIG.baseUrl}/gethelp/${id}`)
+  }
+
   create(gethelp: GetHelp): Observable<GetHelp> {
     return this.http.post<GetHelp>(`${API_CONFIG.baseUrl}/gethelp`, gethelp);
+  }
+
+  update(gethelp: GetHelp): Observable<GetHelp> {
+    return this.http.put<GetHelp>(`${API_CONFIG.baseUrl}/gethelp/${gethelp.id}`, gethelp);
+  }
+
+  delete(id: any): Observable<GetHelp> {
+    return this.http.delete<GetHelp>(`${API_CONFIG.baseUrl}/gethelp/${id}`);
   }
 }
