@@ -11,7 +11,7 @@ export class LayoutFullScreenComponent implements OnInit {
   constructor(private router: Router){ }
 
   ngOnInit(): void {
-    this.router.navigate(['wm/dashboard']);
+    this.router.navigate(['wm/getHelp']);
   }
 
 }

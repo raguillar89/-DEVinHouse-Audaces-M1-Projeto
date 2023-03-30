@@ -35,7 +35,16 @@
     }
   ],
   "gethelp": [
-    
+    {
+      "getHelpTitle": "Como Criar uma Coleção",
+      "getHelpText": "No Sidebar, selecionar Coleções. Na página de Coleções, clicar no botão Criar Coleção.",
+      "id": 1
+    },
+    {
+      "getHelpTitle": "Como Criar um Modelo",
+      "getHelpText": "No Sidebar, selecionar Modelos. Na página de Modelos, clicar no botão Criar Modelo.",
+      "id": 2
+    }
   ],
   "collections": [
     {

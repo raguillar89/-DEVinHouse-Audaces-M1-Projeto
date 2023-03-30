@@ -26,4 +26,8 @@ export class GetHelpListComponent  implements OnInit{
     })
   }
 
+  redirect(id: any) {
+    this.router.navigate([`wm/getHelp/ghEdit/${id}`]);
+  }
+
 }

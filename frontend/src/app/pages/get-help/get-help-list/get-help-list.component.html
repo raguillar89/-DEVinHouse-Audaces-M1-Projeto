@@ -1,1 +1,15 @@
-<p>get-help works!</p>
+<div class="headerPage">
+  <h1>Ajuda</h1>
+  <button routerLink="ghRegister" class="mat-elevation-z8" mat-stroked-button>Criar Card de Ajuda</button>
+</div>
+
+<div class="container mat-elevation-z8">
+  <mat-card class="card mat-elevation-z8" *ngFor="let gethelp of listGetHelp">
+    <mat-card-header>
+      <mat-card-title class="cardTitle" name="getHelpTitle">{{gethelp.getHelpTitle}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="cardText" name="getHelpText">{{gethelp.getHelpText}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
