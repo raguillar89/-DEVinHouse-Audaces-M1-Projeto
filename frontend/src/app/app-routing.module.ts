@@ -36,7 +36,9 @@ const routes: Routes = [
     { path: 'model/mlRegister', component: ModelRegisterComponent },
     { path: 'model/mlEdit/:id', component: ModelEditComponent },
 
-    { path: 'page-under-construction', component: PageUnderConstructionComponent }
+    { path: 'getHelp', component: PageUnderConstructionComponent },
+    { path: 'comments', component: PageUnderConstructionComponent },
+    { path: 'settings', component: PageUnderConstructionComponent },
   ]}
 ];
 
