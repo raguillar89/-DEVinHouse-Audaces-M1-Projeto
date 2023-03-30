@@ -37,13 +37,23 @@
   "gethelp": [
     {
       "getHelpTitle": "Como Criar uma Coleção",
-      "getHelpText": "No Sidebar, selecionar Coleções. Na página de Coleções, clicar no botão Criar Coleção.",
+      "getHelpText": "No Sidebar, selecionar Coleções. Na página de Coleções, clicar no botão Criar Coleção. Após efetuar as alterações, clicar no Botão Salvar.",
       "id": 1
     },
     {
       "getHelpTitle": "Como Criar um Modelo",
-      "getHelpText": "No Sidebar, selecionar Modelos. Na página de Modelos, clicar no botão Criar Modelo.",
+      "getHelpText": "No Sidebar, selecionar Modelos. Na página de Modelos, clicar no botão Criar Modelo. Após efetuar as alterações, clicar no Botão Salvar.",
       "id": 2
+    },
+    {
+      "getHelpTitle": "Como Editar uma Coleção",
+      "getHelpText": "No Sidebar, selecionar Coleções. Na página de Coleções, clicar no Card que você deseja editar. Após efetuar as alterações, clicar no Botão Salvar.",
+      "id": 3
+    },
+    {
+      "getHelpTitle": "Como Editar um Modelo",
+      "getHelpText": "No Sidebar, selecionar Modelos. Na página de Modelos, clicar no Card que você deseja editar. Após efetuar as alterações, clicar no Botão Salvar.",
+      "id": 4
     }
   ],
   "collections": [
