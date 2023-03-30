@@ -22,8 +22,8 @@ export class GetHelpRegisterComponent implements OnInit {
 
   createForm() {
     this.formGetHelp = this.fB.group({
-      getHelpTitle: ['', [Validators.required]],
-      getHelpText: ['', [Validators.required]]
+      getHelpTitle: ['', [Validators.required, Validators.minLength(10)]],
+      getHelpText: ['', [Validators.required, Validators.minLength(20)]]
     });
   }
 
