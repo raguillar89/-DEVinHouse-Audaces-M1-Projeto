@@ -28,7 +28,7 @@ import { registerLocaleData } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
-import { UserRegistrationComponent } from './pages/user-registration/user-registration.component';
+import { UserRegistrationComponent } from './pages/user/user-registration/user-registration.component';
 import { RedefinePasswordComponent } from './pages/redefine-password/redefine-password.component';
 import { SedingConfirmationComponent } from './pages/seding-confirmation/seding-confirmation.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -43,6 +43,7 @@ import { ModelListComponent } from './pages/model/model-list/model-list.componen
 import { ModelRegisterComponent } from './pages/model/model-register/model-register.component';
 import { ModelEditComponent } from './pages/model/model-edit/model-edit.component';
 import { PageUnderConstructionComponent } from './pages/page-under-construction/page-under-construction.component';
+import { UserEditComponent } from './pages/user/user-edit/user-edit.component';
 
 registerLocaleData(ptBr);
 @NgModule({
@@ -63,7 +64,8 @@ registerLocaleData(ptBr);
     ModelListComponent,
     ModelRegisterComponent,
     ModelEditComponent,
-    PageUnderConstructionComponent
+    PageUnderConstructionComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
