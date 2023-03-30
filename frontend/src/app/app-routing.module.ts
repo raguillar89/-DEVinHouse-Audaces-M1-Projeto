@@ -41,7 +41,7 @@ const routes: Routes = [
     { path: 'comments', component: PageUnderConstructionComponent },
     { path: 'settings', component: PageUnderConstructionComponent },
 
-    { path: 'userEdit', component: UserEditComponent }
+    { path: 'userEdit/:id', component: UserEditComponent }
   ]}
 ];
 

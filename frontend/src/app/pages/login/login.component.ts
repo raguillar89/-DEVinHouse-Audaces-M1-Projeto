@@ -67,7 +67,9 @@ export class LoginComponent implements OnInit {
 
   extractUser() {
     const userName = this.user.userName;
+    const userId = this.user.id;
     localStorage.setItem('userName', userName);
+    localStorage.setItem('userId', userId);
   }
 
   onSubmit() {

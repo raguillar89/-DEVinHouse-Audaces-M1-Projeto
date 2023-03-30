@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/interface/user.interface';
 import { UserService } from 'src/app/services/user/user.service';
@@ -11,9 +10,14 @@ import { UserService } from 'src/app/services/user/user.service';
 })
 export class SubMenuComponent implements OnInit{
 
+  user: User = new User();
+  listUsers: User[] = [];
+
   constructor(private router: Router, private service: UserService){ }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.findAll();
+  }
 
   logout() {
     localStorage.removeItem('status');
@@ -22,5 +26,17 @@ export class SubMenuComponent implements OnInit{
     localStorage.removeItem('userName');
     this.service.showMessage('Logout realizado com sucesso!', true);
     this.router.navigate(['login']);
+  }
+
+  redirect(id: any) {
+    this.router.navigate([`wm/userEdit/${localStorage.getItem('userId')}`]);
+  }
+
+  findAll() {
+    this.service.findAll().subscribe((users) => {
+      this.listUsers = users
+      console.log(this.listUsers)
+      console.log(this.user)
+    })
   }
 }
