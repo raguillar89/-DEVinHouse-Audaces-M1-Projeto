@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { catchError, EMPTY, map, Observable } from 'rxjs';
 import { API_CONFIG } from 'src/app/environments/environments';
-import { IUser } from 'src/app/interface/user.interface';
+import { User } from 'src/app/interface/user.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -21,15 +21,29 @@ export class UserService {
     });
   }
 
-  findAll(): Observable<IUser[]> {
-    return this.http.get<IUser[]>(`${API_CONFIG.baseUrl}/users`).pipe(
+  findAll(): Observable<User[]> {
+    return this.http.get<User[]>(`${API_CONFIG.baseUrl}/users`).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
-  create(user: IUser): Observable<IUser> {
-    return this.http.post<IUser>(`${API_CONFIG.baseUrl}/users`, user).pipe(
+  findById(id: any): Observable<User> {
+    return this.http.get<User>(`${API_CONFIG.baseUrl}/users/${id}`).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
+
+  create(user: User): Observable<User> {
+    return this.http.post<User>(`${API_CONFIG.baseUrl}/users`, user).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
+
+  update(user: User): Observable<User> {
+    return this.http.put<User>(`${API_CONFIG.baseUrl}/users/${user.id}`, user).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
