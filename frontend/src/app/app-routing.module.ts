@@ -6,6 +6,7 @@ import { CollectionEditComponent } from './pages/collection/collection-edit/coll
 import { CollectionListComponent } from './pages/collection/collection-list/collection-list.component';
 import { CollectionRegisterComponent } from './pages/collection/collection-register/collection-register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { GetHelpEditComponent } from './pages/get-help/get-help-edit/get-help-edit.component';
 import { GetHelpListComponent } from './pages/get-help/get-help-list/get-help-list.component';
 import { GetHelpRegisterComponent } from './pages/get-help/get-help-register/get-help-register.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -41,6 +42,7 @@ const routes: Routes = [
 
     { path: 'getHelp', component: GetHelpListComponent },
     { path: 'getHelp/ghRegister', component: GetHelpRegisterComponent },
+    { path: 'getHelp/ghEdit/:id', component: GetHelpEditComponent },
 
     { path: 'comments', component: PageUnderConstructionComponent },
     { path: 'settings', component: PageUnderConstructionComponent },
