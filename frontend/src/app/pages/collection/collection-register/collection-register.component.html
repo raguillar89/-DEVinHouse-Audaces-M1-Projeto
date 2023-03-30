@@ -16,9 +16,13 @@
       </mat-form-field>
 
       <mat-form-field class="halfWidth" appearance="fill">
-          <mat-label>Para qual estação?</mat-label>
-          <input name="collectionSeason" formControlName="collectionSeason" type="text" matInput>
-          <mat-icon matSuffix>sunny_snowing</mat-icon>
+        <mat-label>Para qual estação?</mat-label>
+        <mat-select matNativeControl name="collectionSeason" formControlName="collectionSeason">
+          <mat-option value="Primavera">Primavera</mat-option>
+          <mat-option value="Verão">Verão</mat-option>
+          <mat-option value="Outono">Outono</mat-option>
+          <mat-option value="Inverno">Inverno</mat-option>
+        </mat-select>
       </mat-form-field>
 
       <mat-form-field class="halfWidth" appearance="fill">

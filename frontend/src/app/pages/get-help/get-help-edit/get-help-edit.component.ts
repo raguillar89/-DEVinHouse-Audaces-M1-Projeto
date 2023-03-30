@@ -32,6 +32,7 @@ export class GetHelpEditComponent implements OnInit {
   findById():void {
     this.service.findById(this.gethelp.id).subscribe(gethelp => {
       this.gethelp = gethelp;
+      this.formGetHelp.patchValue(this.gethelp);
     });
   }
 
