@@ -13,6 +13,7 @@ import { ModelRegisterComponent } from './pages/model/model-register/model-regis
 import { PageUnderConstructionComponent } from './pages/page-under-construction/page-under-construction.component';
 import { RedefinePasswordComponent } from './pages/redefine-password/redefine-password.component';
 import { SedingConfirmationComponent } from './pages/seding-confirmation/seding-confirmation.component';
+import { UserEditComponent } from './pages/user/user-edit/user-edit.component';
 import { UserRegistrationComponent } from './pages/user/user-registration/user-registration.component';
 
 const routes: Routes = [
@@ -39,6 +40,8 @@ const routes: Routes = [
     { path: 'getHelp', component: PageUnderConstructionComponent },
     { path: 'comments', component: PageUnderConstructionComponent },
     { path: 'settings', component: PageUnderConstructionComponent },
+
+    { path: 'userEdit', component: UserEditComponent }
   ]}
 ];
 
