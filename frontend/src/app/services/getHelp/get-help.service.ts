@@ -29,4 +29,8 @@ export class GetHelpService {
   findAll(): Observable<GetHelp[]> {
     return this.http.get<GetHelp[]>(`${API_CONFIG.baseUrl}/gethelp`);
   }
+
+  create(gethelp: GetHelp): Observable<GetHelp> {
+    return this.http.post<GetHelp>(`${API_CONFIG.baseUrl}/gethelp`, gethelp);
+  }
 }
