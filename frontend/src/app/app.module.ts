@@ -44,6 +44,7 @@ import { ModelRegisterComponent } from './pages/model/model-register/model-regis
 import { ModelEditComponent } from './pages/model/model-edit/model-edit.component';
 import { PageUnderConstructionComponent } from './pages/page-under-construction/page-under-construction.component';
 import { UserEditComponent } from './pages/user/user-edit/user-edit.component';
+import { GetHelpComponent } from './pages/get-help/get-help.component';
 
 registerLocaleData(ptBr);
 @NgModule({
@@ -65,7 +66,8 @@ registerLocaleData(ptBr);
     ModelRegisterComponent,
     ModelEditComponent,
     PageUnderConstructionComponent,
-    UserEditComponent
+    UserEditComponent,
+    GetHelpComponent
   ],
   imports: [
     BrowserModule,
