@@ -13,7 +13,7 @@ import { ModelRegisterComponent } from './pages/model/model-register/model-regis
 import { PageUnderConstructionComponent } from './pages/page-under-construction/page-under-construction.component';
 import { RedefinePasswordComponent } from './pages/redefine-password/redefine-password.component';
 import { SedingConfirmationComponent } from './pages/seding-confirmation/seding-confirmation.component';
-import { UserRegistrationComponent } from './pages/user-registration/user-registration.component';
+import { UserRegistrationComponent } from './pages/user/user-registration/user-registration.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
