@@ -4,34 +4,9 @@
       "id": 1,
       "userName": "Renan Pinho",
       "userCompany": "Audaces",
-      "userCnpj": "85.236.743/0001-18",
+      "userCnpj": "85236743000118",
       "userEmail": "renan@email.com",
       "userPassword": "654321as"
-    },
-    {
-      "userName": "João Paulo",
-      "userCompany": "Yduqs",
-      "userCnpj": "11111111111111",
-      "userEmail": "joao.paulo@email.com",
-      "userPassword": "12345678",
-      "id": 2
-    },
-    {
-      "userName": "João Paulo",
-      "userCompany": "Flamengo",
-      "userCnpj": "22222222222222",
-      "userEmail": "flamengo@email.com",
-      "userPassword": "123456as",
-      "id": 3
-    },
-    {
-      "userName": "afdsafas",
-      "userCompany": "fdsafsda",
-      "userCnpj": "56566666666666",
-      "userEmail": "renan.pidsnho@email.com",
-      "userPassword": "987654321",
-      "userPasswordConfirmation": "987654321",
-      "id": 6
     }
   ],
   "gethelp": [
