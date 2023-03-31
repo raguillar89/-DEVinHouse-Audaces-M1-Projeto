@@ -57,11 +57,12 @@ export class UserEditComponent implements OnInit {
     this.user.userCompany = this.formUserEdit.value.userCompany;
     this.user.userCnpj = this.formUserEdit.value.userCnpj;
     this.user.userPassword = this.formUserEdit.value.userPassword;
+    this.user.userPasswordConfirmation = this.formUserEdit.value.userPasswordConfirmation;
 
     if(password !== passwordConfirmation){
       this.service.showMessage('Senhas divergentes, favor conferir.', true);
     } else {
-      if(this.formUserEdit.valid){
+      if(!this.formUserEdit.valid){
         this.service.showMessage('Preencha todas as informações', true);
       } else {
         this.service.update(this.user).subscribe(() => {
