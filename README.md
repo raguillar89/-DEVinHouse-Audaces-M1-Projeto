@@ -2,9 +2,7 @@
 <hr>
 <h1 align="center"> About the project </h1>
 <h2 align="center"> 💻 Evaluative project of the front-end module of the course DevInHouse | Audaces 💻 </h2>
-<img src="/frontend/src/assets/aud1.jpg">
-<hr>
-<img src="/frontend/src/assets/aud2.jpg">
+<img align="center" src="/frontend/src/assets/aud1.jpg">
 <hr>
 <h3 align="center"> A Front-End application was developed for the Lab Clothing Collection project where the CRUD related to Collections and Models were developed, among other features. </h3>
 <hr>
