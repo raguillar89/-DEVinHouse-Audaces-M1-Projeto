@@ -29,7 +29,7 @@ export class CollectionListComponent implements OnInit{
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private service: CollectionService, private modelService: ModelService, private router: Router, private http: HttpClient) {}
+  constructor(private service: CollectionService, private modelService: ModelService, private router: Router) {}
 
   ngOnInit(): void {
     this.ngAfterViewInit();

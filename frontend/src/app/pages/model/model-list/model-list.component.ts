@@ -28,7 +28,7 @@ export class ModelListComponent  implements OnInit{
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private service: ModelService, private router: Router, private collectionService: CollectionService, private http: HttpClient) {}
+  constructor(private service: ModelService, private router: Router, private collectionService: CollectionService) {}
 
   ngOnInit(): void {
     this.ngAfterViewInit();

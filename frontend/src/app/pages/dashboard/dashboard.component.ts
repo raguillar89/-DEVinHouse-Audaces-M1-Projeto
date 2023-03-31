@@ -28,7 +28,7 @@ export class DashboardComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private modelService: ModelService, private collectionService: CollectionService, private http: HttpClient) {
+  constructor(private modelService: ModelService, private collectionService: CollectionService) {
     this.sortedValue = this.listCollections.slice();
   }
 
