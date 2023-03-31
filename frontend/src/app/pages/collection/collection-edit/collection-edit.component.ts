@@ -26,9 +26,9 @@ export class CollectionEditComponent implements OnInit {
     this.formCollection = this.fB.group({
       collectionName: ['', [Validators.required, Validators.minLength(4)]],
       collectionResponsible: ['', [Validators.required, Validators.minLength(5)]],
-      collectionSeason: ['', [Validators.required, Validators.minLength(5)]],
-      collectionYear: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(4)]],
-      collectionBrand: ['', [Validators.required, Validators.minLength(4)]],
+      collectionSeason: ['', [Validators.required]],
+      collectionYear: ['', [Validators.required, Validators.maxLength(4)]],
+      collectionBrand: ['', [Validators.required, Validators.minLength(3)]],
       collectionBudget: ['', [Validators.required, Validators.minLength(1)]]
     });
   }

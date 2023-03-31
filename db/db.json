@@ -6,7 +6,17 @@
       "userCompany": "Audaces",
       "userCnpj": "85236743000118",
       "userEmail": "renan@email.com",
-      "userPassword": "654321as"
+      "userPassword": "87654321",
+      "userPasswordConfirmation": "87654321"
+    },
+    {
+      "userName": "Yan Esteves",
+      "userCompany": "Audaces",
+      "userCnpj": "85236743000118",
+      "userEmail": "yan.esteves@email.com",
+      "userPassword": "123456789",
+      "userPasswordConfirmation": "123456789",
+      "id": 2
     }
   ],
   "gethelp": [
@@ -33,73 +43,73 @@
   ],
   "collections": [
     {
-      "collectionName": "Camisas Esportivas",
+      "collectionName": "Adidas",
       "collectionResponsible": "Renan Pinho",
       "collectionSeason": "Verão",
       "collectionYear": 2023,
       "collectionBrand": "Adidas",
-      "collectionBudget": 21000,
+      "collectionBudget": 35000,
       "id": 1
     },
     {
-      "collectionName": "Bermudas Esportivas",
-      "collectionResponsible": "Yan Esteves",
-      "collectionSeason": "Verão",
-      "collectionYear": 2023,
-      "collectionBrand": "Nike",
-      "collectionBudget": 12050,
-      "id": 2
-    },
-    {
-      "collectionName": "Calça Esportiva",
-      "collectionResponsible": "Matheus Freitas",
-      "collectionSeason": "Verão",
-      "collectionYear": 2023,
-      "collectionBrand": "Puma",
-      "collectionBudget": 9805,
-      "id": 3
-    },
-    {
-      "collectionName": "Boné Esportivo",
-      "collectionResponsible": "Renan Pinho",
-      "collectionSeason": "Verão",
-      "collectionYear": 2023,
-      "collectionBrand": "Adidas",
-      "collectionBudget": 32600,
-      "id": 4
-    },
-    {
-      "collectionName": "Bolsa Esportivas",
-      "collectionResponsible": "Yan Esteves",
-      "collectionSeason": "Verão",
-      "collectionYear": 2023,
-      "collectionBrand": "Nike",
-      "collectionBudget": 24590,
-      "id": 5
-    },
-    {
-      "collectionName": "Saia Jeans",
-      "collectionResponsible": "Matheus Freitas",
-      "collectionSeason": "Outono",
-      "collectionYear": 2024,
-      "collectionBrand": "Puma",
-      "collectionBudget": 14760,
-      "id": 6
-    },
-    {
-      "collectionName": "Camisas Regatas",
+      "collectionName": "Nike",
       "collectionResponsible": "Yan Esteves",
       "collectionSeason": "Primavera",
       "collectionYear": 2024,
-      "collectionBrand": "Adidas",
-      "collectionBudget": 17500,
+      "collectionBrand": "Nike",
+      "collectionBudget": 26540,
+      "id": 2
+    },
+    {
+      "collectionName": "Renner",
+      "collectionResponsible": "Matheus Freitas",
+      "collectionSeason": "Verão",
+      "collectionYear": 2025,
+      "collectionBrand": "Renner",
+      "collectionBudget": 36540,
+      "id": 3
+    },
+    {
+      "collectionName": "Puma",
+      "collectionResponsible": "Renan Pinho",
+      "collectionSeason": "Outono",
+      "collectionYear": 2024,
+      "collectionBrand": "Puma",
+      "collectionBudget": 16800,
+      "id": 4
+    },
+    {
+      "collectionName": "Reebok",
+      "collectionResponsible": "Renan Pinho",
+      "collectionSeason": "Inverno",
+      "collectionYear": 2024,
+      "collectionBrand": "Reebok",
+      "collectionBudget": 42030,
+      "id": 5
+    },
+    {
+      "collectionName": "Farm",
+      "collectionResponsible": "Priscila Pinho",
+      "collectionSeason": "Verão",
+      "collectionYear": 2023,
+      "collectionBrand": "Farm",
+      "collectionBudget": 36870,
+      "id": 6
+    },
+    {
+      "collectionName": "Marisa",
+      "collectionResponsible": "Priscila Pinho",
+      "collectionSeason": "Verão",
+      "collectionYear": 2023,
+      "collectionBrand": "Marisa",
+      "collectionBudget": 24500,
       "id": 7
     }
   ],
   "models": [
     {
-      "modelName": "Camisa do Flamengo",
-      "modelResponsible": "Renan Pinho",
+      "modelName": "Camisas Esportivas",
+      "modelResponsible": "Yan Esteves",
       "modelType": "Camisa",
       "modelCollection": 1,
       "modelEmbroidery": "Não",
@@ -107,8 +117,8 @@
       "id": 1
     },
     {
-      "modelName": "Bermuda do Vasco",
-      "modelResponsible": "Yan Esteves",
+      "modelName": "Shorts",
+      "modelResponsible": "Renan Pinho",
       "modelType": "Bermuda",
       "modelCollection": 2,
       "modelEmbroidery": "Não",
@@ -116,13 +126,40 @@
       "id": 2
     },
     {
-      "modelName": "Calça do Flamengo",
+      "modelName": "Bermudas",
       "modelResponsible": "Renan Pinho",
-      "modelType": "Calça",
-      "modelCollection": 3,
-      "modelEmbroidery": "Sim",
+      "modelType": "Bermuda",
+      "modelCollection": 4,
+      "modelEmbroidery": "Não",
       "modelStamp": "Sim",
       "id": 3
+    },
+    {
+      "modelName": "Bolsa Esportiva",
+      "modelResponsible": "Priscila Pinho",
+      "modelType": "Bolsa",
+      "modelCollection": 5,
+      "modelEmbroidery": "Sim",
+      "modelStamp": "Sim",
+      "id": 4
+    },
+    {
+      "modelName": "Camisetas Regatas",
+      "modelResponsible": "Matheus Freitas",
+      "modelType": "Camisa",
+      "modelCollection": 3,
+      "modelEmbroidery": "Não",
+      "modelStamp": "Sim",
+      "id": 5
+    },
+    {
+      "modelName": "Biquínis",
+      "modelResponsible": "Priscila Pinho",
+      "modelType": "Biquíni",
+      "modelCollection": 1,
+      "modelEmbroidery": "Sim",
+      "modelStamp": "Não",
+      "id": 6
     }
   ]
 }

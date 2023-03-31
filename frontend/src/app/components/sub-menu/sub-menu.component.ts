@@ -24,6 +24,7 @@ export class SubMenuComponent implements OnInit{
     localStorage.removeItem('login');
     localStorage.removeItem('nome');
     localStorage.removeItem('userName');
+    localStorage.removeItem('userId');
     this.service.showMessage('Logout realizado com sucesso!', true);
     this.router.navigate(['login']);
   }

@@ -4,7 +4,8 @@ export interface IUser{
   userCompany: string,
   userCnpj: string,
   userEmail: string,
-  userPassword: string
+  userPassword: string,
+  userPasswordConfirmation: string
 }
 
 export class User implements IUser {
@@ -14,4 +15,5 @@ export class User implements IUser {
   userCnpj!: string;
   userEmail!: string;
   userPassword!: string;
+  userPasswordConfirmation!: string;
 }
