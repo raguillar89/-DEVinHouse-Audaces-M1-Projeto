@@ -14,7 +14,7 @@ export class GetHelpListComponent  implements OnInit{
   getHelp: GetHelp = new GetHelp();
   listGetHelp: GetHelp[] = [];
 
-  constructor(private service: GetHelpService, private router: Router, private http: HttpClient) {}
+  constructor(private service: GetHelpService, private router: Router) {}
 
   ngOnInit(): void {
     this.findAll();
